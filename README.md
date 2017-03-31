@@ -3,4 +3,6 @@ This repository hosts “last good” (from my perspective) versions of Google�
 
 The fonts are grouped by the ISO 15924 script codes dominent in each font’s glyph repertoire. 
 
+* Also see [Toto Han fonts](https://github.com/twardoch/toto-han-fonts)
+
 — Adam Twardoch, Nov 27, 2015
