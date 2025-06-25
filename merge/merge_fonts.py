@@ -30,17 +30,19 @@ Sample Usage:
     $ merge_fonts.py -d noto-fonts/unhinted -o NotoSansMerged-Regular.ttf
 
 """
-import sys
-import os.path
-import logging
-from argparse import ArgumentParser
-import yaml
 
-from fontTools import ttLib
-from fontTools import merge
-from merge_noto import add_gsub_to_font, has_gsub_table
-from nototools.substitute_linemetrics import read_line_metrics, set_line_metrics
+import logging
+import os.path
+import sys
+from argparse import ArgumentParser
+
+import yaml
+from fontTools import merge, ttLib
 from fontTools.misc.loggingTools import Timer
+from merge_noto import add_gsub_to_font, has_gsub_table
+
+from nototools.substitute_linemetrics import (read_line_metrics,
+                                              set_line_metrics)
 
 log = logging.getLogger("nototools.merge_fonts")
 
@@ -48,38 +50,46 @@ log = logging.getLogger("nototools.merge_fonts")
 def main():
     t = Timer()
     parser = ArgumentParser()
-    parser.add_argument('-f', '--files',
-        help='Path to YAML file containing paths to the fonts')
-    parser.add_argument('-o', '--output', default='merged.ttf',
-        help='Path to output file.')
-    parser.add_argument('-v', '--verbose', action='store_true',
-        help='Verbose mode, printing out more info')
+    parser.add_argument(
+        "-f", "--files", help="Path to YAML file containing paths to the fonts"
+    )
+    parser.add_argument(
+        "-o", "--output", default="merged.ttf", help="Path to output file."
+    )
+    parser.add_argument(
+        "-v",
+        "--verbose",
+        action="store_true",
+        help="Verbose mode, printing out more info",
+    )
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.INFO if args.verbose else logging.WARNING)
 
-    if not args.files: 
-        print('add -h for usage')
+    if not args.files:
+        print("add -h for usage")
         sys.exit(2)
 
-    with open(args.files, 'r') as stream:
+    with open(args.files) as stream:
         try:
             valid_files = yaml.safe_load(stream)
         except yaml.YAMLError as exc:
             print(exc)
 
     if len(valid_files) <= 1:
-        log.warn('expecting at least two fonts to merge, but only got %d '
-            + 'font(s).', len(valid_files))
+        log.warn(
+            "expecting at least two fonts to merge, but only got %d " + "font(s).",
+            len(valid_files),
+        )
         sys.exit(-1)
 
     for idx, file in enumerate(valid_files):
         if not has_gsub_table(file):
-            log.info('adding default GSUB table to %s.' % file)
+            log.info("adding default GSUB table to %s." % file)
             valid_files[idx] = add_gsub_to_font(file)
 
     merger = merge.Merger()
-    print('Merging %d Fonts...' % len(valid_files))
+    print("Merging %d Fonts..." % len(valid_files))
     font = merger.merge(valid_files)
     # Use the line metric in the first font to replace the one in final result.
     metrics = read_line_metrics(ttLib.TTFont(valid_files[0]))
@@ -87,10 +97,12 @@ def main():
     font.save(args.output)
     font.close()
 
-    print('%d fonts are merged. Cost %0.3f s.' % (len(valid_files), t.time()))
-    print('Please check the result at %s.' % os.path.abspath(
-        os.path.realpath(args.output)))
+    print("%d fonts are merged. Cost %0.3f s." % (len(valid_files), t.time()))
+    print(
+        "Please check the result at %s."
+        % os.path.abspath(os.path.realpath(args.output))
+    )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
