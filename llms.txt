@@ -1,0 +1,1021 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+merge/
+  yaml/
+    basic-sans-reg.yaml
+    basic-serif-reg.yaml
+    sans-bol.yaml
+    sans-bolita.yaml
+    sans-ita.yaml
+    sans-reg.yaml
+    serif-bol.yaml
+    serif-bolita.yaml
+    serif-ita.yaml
+    serif-reg.yaml
+  all-merge.command
+  makeyamls.command
+  merge_fonts.py
+  merge_noto.py
+  sort_fonts.py
+.gitignore
+LICENSE
+README.md
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="merge/yaml/basic-sans-reg.yaml">
+- ../ttf/sans-reg/_Latn__Grek__Cyrl_/NotoSans-LCG.ttf
+- ../ttf/sans-reg/_Zsym_/NotoSans-Symbols.ttf
+- ../ttf/other/_Zzzz_/DroidEmoji.ttf
+- ../ttf/sans-reg/_Armn_/NotoSans-Armenian.ttf
+- ../ttf/sans-reg/_Geor_/NotoSans-Georgian.ttf
+</file>
+
+<file path="merge/yaml/basic-serif-reg.yaml">
+- ../ttf/serif-reg/_Latn__Grek__Cyrl_/NotoSerif-LCG.ttf
+- ../ttf/sans-reg/_Zsym_/NotoSans-Symbols.ttf
+- ../ttf/other/_Zzzz_/DroidEmoji.ttf
+- ../ttf/serif-reg/_Armn_/NotoSerif-Armenian.ttf
+- ../ttf/serif-reg/_Geor_/NotoSerif-Georgian.ttf
+</file>
+
+<file path="merge/yaml/sans-bol.yaml">
+- ../ttf/sans-bol/_Latn__Grek__Cyrl_/NotoSans-LCG-Bold.ttf
+- ../ttf/sans-bol/_Armn_/NotoSans-Armenian-Bold.ttf
+- ../ttf/sans-bol/_Geor_/NotoSans-Georgian-Bold.ttf
+- ../ttf/sans-bol/_Hebr_/NotoSans-Hebrew-Bold.ttf
+- ../ttf/sans-bol/_Thaa_/NotoSans-Thaana-Bold.ttf
+- ../ttf/sans-bol/_Deva_/NotoSans-Devanagari-Bold.ttf
+- ../ttf/sans-bol/_Beng_/NotoSans-Bengali-Bold.ttf
+- ../ttf/sans-bol/_Guru_/NotoSans-Gurmukhi-Bold.ttf
+- ../ttf/sans-bol/_Gujr_/NotoSans-Gujarati-Bold.ttf
+- ../ttf/sans-bol/_Orya_/NotoSans-Oriya-Bold.ttf
+- ../ttf/sans-bol/_Taml_/NotoSans-Tamil-Bold.ttf
+- ../ttf/sans-bol/_Telu_/NotoSans-Telugu-Bold.ttf
+- ../ttf/sans-bol/_Knda_/NotoSans-Kannada-Bold.ttf
+- ../ttf/sans-bol/_Mlym_/NotoSans-Malayalam-Bold.ttf
+- ../ttf/sans-bol/_Sinh_/NotoSans-Sinhala-Bold.ttf
+- ../ttf/sans-bol/_Thai_/NotoSans-Thai-Bold.ttf
+- ../ttf/sans-bol/_Laoo_/NotoSans-Lao-Bold.ttf
+- ../ttf/sans-bol/_Tibt_/NotoSans-Tibetan-Bold.ttf
+- ../ttf/sans-bol/_Mymr_/NotoSans-Myanmar-Bold.ttf
+- ../ttf/sans-bol/_Ethi_/NotoSans-Ethiopic-Bold.ttf
+- ../ttf/sans-bol/_Khmr_/NotoSans-Khmer-Bold.ttf
+- ../ttf/sans-bol/_Cham_/NotoSans-Cham-Bold.ttf
+</file>
+
+<file path="merge/yaml/sans-bolita.yaml">
+- ../ttf/sans-bolita/_Latn__Grek__Cyrl_/NotoSans-LCG-BoldItalic.ttf
+</file>
+
+<file path="merge/yaml/sans-ita.yaml">
+- ../ttf/sans-ita/_Latn__Grek__Cyrl_/NotoSans-LCG-Italic.ttf
+</file>
+
+<file path="merge/yaml/sans-reg.yaml">
+- ../ttf/sans-reg/_Latn__Grek__Cyrl_/NotoSans-LCG.ttf
+- ../ttf/sans-reg/_Zsym_/NotoSans-Symbols.ttf
+- ../ttf/other/_Zzzz_/DroidEmoji.ttf
+- ../ttf/sans-reg/_Armn_/NotoSans-Armenian.ttf
+- ../ttf/sans-reg/_Geor_/NotoSans-Georgian.ttf
+- ../ttf/sans-reg/_Hebr_/NotoSans-Hebrew.ttf
+- ../ttf/other/_Arab_/NotoNaskhArabic.ttf
+- ../ttf/sans-reg/_Syrc_/NotoSans-SyriacEastern.ttf
+- ../ttf/sans-reg/_Syrc_/NotoSans-SyriacEstrangela.ttf
+- ../ttf/sans-reg/_Syrc_/NotoSans-SyriacWestern.ttf
+- ../ttf/sans-reg/_Thaa_/NotoSans-Thaana.ttf
+- ../ttf/sans-reg/_Nkoo_/NotoSans-NKo.ttf
+- ../ttf/sans-reg/_Samr_/NotoSans-Samaritan.ttf
+- ../ttf/sans-reg/_Mand_/NotoSans-Mandaic.ttf
+- ../ttf/sans-reg/_Deva_/NotoSans-Devanagari.ttf
+- ../ttf/sans-reg/_Beng_/NotoSans-Bengali.ttf
+- ../ttf/sans-reg/_Guru_/NotoSans-Gurmukhi.ttf
+- ../ttf/sans-reg/_Gujr_/NotoSans-Gujarati.ttf
+- ../ttf/sans-reg/_Orya_/NotoSans-Oriya.ttf
+- ../ttf/sans-reg/_Taml_/NotoSans-Tamil.ttf
+- ../ttf/sans-reg/_Telu_/NotoSans-Telugu.ttf
+- ../ttf/sans-reg/_Knda_/NotoSans-Kannada.ttf
+- ../ttf/sans-reg/_Mlym_/NotoSans-Malayalam.ttf
+- ../ttf/sans-reg/_Sinh_/NotoSans-Sinhala.ttf
+- ../ttf/sans-reg/_Thai_/NotoSans-Thai.ttf
+- ../ttf/sans-reg/_Laoo_/NotoSans-Lao.ttf
+- ../ttf/sans-reg/_Tibt_/NotoSans-Tibetan.ttf
+- ../ttf/sans-reg/_Mymr_/NotoSans-Myanmar.ttf
+- ../ttf/sans-reg/_Ethi_/NotoSans-Ethiopic.ttf
+- ../ttf/sans-reg/_Cher_/NotoSans-Cherokee.ttf
+- ../ttf/sans-reg/_Cans_/NotoSans-CanadianAboriginal.ttf
+- ../ttf/sans-reg/_Ogam_/NotoSans-Ogham.ttf
+- ../ttf/sans-reg/_Runr_/NotoSans-Runic.ttf
+- ../ttf/sans-reg/_Tglg_/NotoSans-Tagalog.ttf
+- ../ttf/sans-reg/_Hano_/NotoSans-Hanunoo.ttf
+- ../ttf/sans-reg/_Buhd_/NotoSans-Buhid.ttf
+- ../ttf/sans-reg/_Tagb_/NotoSans-Tagbanwa.ttf
+- ../ttf/sans-reg/_Khmr_/NotoSans-Khmer.ttf
+- ../ttf/sans-reg/_Mong_/NotoSans-Mongolian.ttf
+- ../ttf/sans-reg/_Limb_/NotoSans-Limbu.ttf
+- ../ttf/sans-reg/_Tale_/NotoSans-TaiLe.ttf
+- ../ttf/sans-reg/_Talu_/NotoSans-NewTaiLue.ttf
+- ../ttf/sans-reg/_Bugi_/NotoSans-Buginese.ttf
+- ../ttf/sans-reg/_Lana_/NotoSans-TaiTham.ttf
+- ../ttf/sans-reg/_Bali_/NotoSans-Balinese.ttf
+- ../ttf/sans-reg/_Sund_/NotoSans-Sundanese.ttf
+- ../ttf/sans-reg/_Batk_/NotoSans-Batak.ttf
+- ../ttf/sans-reg/_Lepc_/NotoSans-Lepcha.ttf
+- ../ttf/sans-reg/_Olck_/NotoSans-OlChiki.ttf
+- ../ttf/sans-reg/_Glag_/NotoSans-Glagolitic.ttf
+- ../ttf/sans-reg/_Copt_/NotoSans-Coptic.ttf
+- ../ttf/sans-reg/_Tfng_/NotoSans-Tifinagh.ttf
+- ../ttf/sans-reg/_Yiii_/NotoSans-Yi.ttf
+- ../ttf/sans-reg/_Lisu_/NotoSans-Lisu.ttf
+- ../ttf/sans-reg/_Vaii_/NotoSans-Vai.ttf
+- ../ttf/sans-reg/_Sylo_/NotoSans-SylotiNagri.ttf
+- ../ttf/sans-reg/_Phag_/NotoSans-PhagsPa.ttf
+- ../ttf/sans-reg/_Saur_/NotoSans-Saurashtra.ttf
+- ../ttf/sans-reg/_Kali_/NotoSans-KayahLi.ttf
+- ../ttf/sans-reg/_Rjng_/NotoSans-Rejang.ttf
+- ../ttf/sans-reg/_Java_/NotoSans-Javanese.ttf
+- ../ttf/sans-reg/_Cham_/NotoSans-Cham.ttf
+- ../ttf/sans-reg/_Tavt_/NotoSans-TaiViet.ttf
+- ../ttf/sans-reg/_Mtei_/NotoSans-MeeteiMayek.ttf
+- ../ttf/sans-reg/_Linb_/NotoSans-LinearB.ttf
+- ../ttf/sans-reg/_Lyci_/NotoSans-Lycian.ttf
+- ../ttf/sans-reg/_Cari_/NotoSans-Carian.ttf
+- ../ttf/sans-reg/_Ital_/NotoSans-OldItalic.ttf
+- ../ttf/sans-reg/_Goth_/NotoSans-Gothic.ttf
+- ../ttf/sans-reg/_Ugar_/NotoSans-Ugaritic.ttf
+- ../ttf/sans-reg/_Xpeo_/NotoSans-OldPersian.ttf
+- ../ttf/sans-reg/_Dsrt_/NotoSans-Deseret.ttf
+- ../ttf/sans-reg/_Shaw_/NotoSans-Shavian.ttf
+- ../ttf/sans-reg/_Osma_/NotoSans-Osmanya.ttf
+- ../ttf/sans-reg/_Cprt_/NotoSans-Cypriot.ttf
+- ../ttf/sans-reg/_Armi_/NotoSans-ImperialAramaic.ttf
+- ../ttf/sans-reg/_Phnx_/NotoSans-Phoenician.ttf
+- ../ttf/sans-reg/_Lydi_/NotoSans-Lydian.ttf
+- ../ttf/sans-reg/_Khar_/NotoSans-Kharoshthi.ttf
+- ../ttf/sans-reg/_Sarb_/NotoSans-OldSouthArabian.ttf
+- ../ttf/sans-reg/_Avst_/NotoSans-Avestan.ttf
+- ../ttf/sans-reg/_Prti_/NotoSans-InscriptionalParthian.ttf
+- ../ttf/sans-reg/_Phli_/NotoSans-InscriptionalPahlavi.ttf
+- ../ttf/sans-reg/_Orkh_/NotoSans-OldTurkic.ttf
+- ../ttf/sans-reg/_Brah_/NotoSans-Brahmi.ttf
+- ../ttf/sans-reg/_Kthi_/NotoSans-Kaithi.ttf
+- ../ttf/sans-reg/_Egyp__Xsux__Linb__Latn__Orkh_/NotoSans-Historic.ttf
+- ../ttf/sans-reg/_Xsux_/NotoSans-Cuneiform.ttf
+- ../ttf/sans-reg/_Egyp_/NotoSans-EgyptianHieroglyphs.ttf
+- ../ttf/sans-reg/_Bamu_/NotoSans-Bamum.ttf
+</file>
+
+<file path="merge/yaml/serif-bol.yaml">
+- ../ttf/serif-bol/_Latn__Grek__Cyrl_/NotoSerif-LCG-Bold.ttf
+- ../ttf/serif-bol/_Armn_/NotoSerif-Armenian-Bold.ttf
+- ../ttf/serif-bol/_Geor_/NotoSerif-Georgian-Bold.ttf
+- ../ttf/serif-bol/_Thai_/NotoSerif-Thai-Bold.ttf
+- ../ttf/serif-bol/_Laoo_/NotoSerif-Lao-Bold.ttf
+- ../ttf/serif-bol/_Khmr_/NotoSerif-Khmer-Bold.ttf
+</file>
+
+<file path="merge/yaml/serif-bolita.yaml">
+- ../ttf/serif-bolita/_Latn__Grek__Cyrl_/NotoSerif-LCG-BoldItalic.ttf
+</file>
+
+<file path="merge/yaml/serif-ita.yaml">
+- ../ttf/serif-ita/_Latn__Grek__Cyrl_/NotoSerif-LCG-Italic.ttf
+</file>
+
+<file path="merge/yaml/serif-reg.yaml">
+- ../ttf/serif-reg/_Latn__Grek__Cyrl_/NotoSerif-LCG.ttf
+- ../ttf/sans-reg/_Zsym_/NotoSans-Symbols.ttf
+- ../ttf/other/_Zzzz_/DroidEmoji.ttf
+- ../ttf/serif-reg/_Armn_/NotoSerif-Armenian.ttf
+- ../ttf/serif-reg/_Geor_/NotoSerif-Georgian.ttf
+- ../ttf/other/_Arab_/NotoNaskhArabic.ttf
+- ../ttf/serif-reg/_Thai_/NotoSerif-Thai.ttf
+- ../ttf/serif-reg/_Laoo_/NotoSerif-Lao.ttf
+- ../ttf/serif-reg/_Khmr_/NotoSerif-Khmer.ttf
+</file>
+
+<file path=".gitignore">
+deps/
+
+# Other
+.idea/
+.mypy_cache/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+.hypothesis/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# IPython Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# dotenv
+.env
+
+# virtualenv
+venv/
+ENV/
+
+# Spyder project settings
+.spyderproject
+
+# Rope project settings
+.ropeproject
+.DS_Store
+</file>
+
+<file path="LICENSE">
+Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "{}"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright {yyyy} {name of copyright owner}
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+</file>
+
+<file path="merge/all-merge.command">
+#!/usr/bin/env bash
+dir=${0%/*}; if [ "$dir" = "$0" ]; then dir="."; fi; cd "$dir";
+
+mkdir -p ../ttf_merged
+ls -1 yaml | while read y; do
+	n=$(basename $y ".yaml");
+	echo "# Merging $n..."
+	python3 ./merge_fonts.py -f "yaml/$y" -o "../ttf_merged/$n.ttf";
+done;
+echo "# Done"
+</file>
+
+<file path="merge/makeyamls.command">
+#!/usr/bin/env bash
+dir=${0%/*}; if [ "$dir" = "$0" ]; then dir="."; fi; cd "$dir";
+
+mkdir -p yaml;
+f='sans-reg'; find ../ttf/$f -iname "*.ttf" | while read p; do echo "- $p" >> yaml/$f.yaml; done; ./sort_fonts.py yaml/$f.yaml;
+f='sans-ita'; find ../ttf/$f -iname "*.ttf" | while read p; do echo "- $p" >> yaml/$f.yaml; done; ./sort_fonts.py yaml/$f.yaml;
+f='sans-bol'; find ../ttf/$f -iname "*.ttf" | while read p; do echo "- $p" >> yaml/$f.yaml; done; ./sort_fonts.py yaml/$f.yaml;
+f='sans-bolita'; find ../ttf/$f -iname "*.ttf" | while read p; do echo "- $p" >> yaml/$f.yaml; done; ./sort_fonts.py yaml/$f.yaml;
+f='serif-reg'; find ../ttf/$f -iname "*.ttf" | while read p; do echo "- $p" >> yaml/$f.yaml; done; ./sort_fonts.py yaml/$f.yaml;
+f='serif-ita'; find ../ttf/$f -iname "*.ttf" | while read p; do echo "- $p" >> yaml/$f.yaml; done; ./sort_fonts.py yaml/$f.yaml;
+f='serif-bol'; find ../ttf/$f -iname "*.ttf" | while read p; do echo "- $p" >> yaml/$f.yaml; done; ./sort_fonts.py yaml/$f.yaml;
+f='serif-bolita'; find ../ttf/$f -iname "*.ttf" | while read p; do echo "- $p" >> yaml/$f.yaml; done; ./sort_fonts.py yaml/$f.yaml;
+</file>
+
+<file path="merge/merge_fonts.py">
+#!/usr/bin/env python3
+#
+# Copyright 2017 Google Inc. All rights reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+"""Merges fonts.
+Two notable differences between merge_noto and this script are:
+1. merge_noto merges all fonts in Noto, or merges a subset of Noto
+   clustered by region. While This script merges a selected font subset.
+2. The line metrics in the final merged font are substituted by those in
+   NotoSans-Regular.ttf (LGC). This is to optimize the user experience in LGC.
+   The drawback is some tall scripts in the file list (like Balinese, Cuneiform,
+  Javaness) might vertically overlap with each other and also be clipped by the
+  edge of the UI. This should be handled carefully by the UI designer, say
+  changing the line height or adding the margin.
+
+
+Sample Usage:
+    $ merge_fonts.py -d noto-fonts/unhinted -o NotoSansMerged-Regular.ttf
+
+"""
+
+import logging
+import os.path
+import sys
+from argparse import ArgumentParser
+
+import yaml
+from fontTools import merge, ttLib
+from fontTools.misc.loggingTools import Timer
+from merge_noto import add_gsub_to_font, has_gsub_table
+
+from nototools.substitute_linemetrics import (read_line_metrics,
+                                              set_line_metrics)
+
+log = logging.getLogger("nototools.merge_fonts")
+
+
+def main():
+    t = Timer()
+    parser = ArgumentParser()
+    parser.add_argument(
+        "-f", "--files", help="Path to YAML file containing paths to the fonts"
+    )
+    parser.add_argument(
+        "-o", "--output", default="merged.ttf", help="Path to output file."
+    )
+    parser.add_argument(
+        "-v",
+        "--verbose",
+        action="store_true",
+        help="Verbose mode, printing out more info",
+    )
+    args = parser.parse_args()
+
+    logging.basicConfig(level=logging.INFO if args.verbose else logging.WARNING)
+
+    if not args.files:
+        print("add -h for usage")
+        sys.exit(2)
+
+    with open(args.files) as stream:
+        try:
+            valid_files = yaml.safe_load(stream)
+        except yaml.YAMLError as exc:
+            print(exc)
+
+    if len(valid_files) <= 1:
+        log.warn(
+            "expecting at least two fonts to merge, but only got %d " + "font(s).",
+            len(valid_files),
+        )
+        sys.exit(-1)
+
+    for idx, file in enumerate(valid_files):
+        if not has_gsub_table(file):
+            log.info("adding default GSUB table to %s." % file)
+            valid_files[idx] = add_gsub_to_font(file)
+
+    merger = merge.Merger()
+    print("Merging %d Fonts..." % len(valid_files))
+    font = merger.merge(valid_files)
+    # Use the line metric in the first font to replace the one in final result.
+    metrics = read_line_metrics(ttLib.TTFont(valid_files[0]))
+    set_line_metrics(font, metrics)
+    font.save(args.output)
+    font.close()
+
+    print("%d fonts are merged. Cost %0.3f s." % (len(valid_files), t.time()))
+    print(
+        "Please check the result at %s."
+        % os.path.abspath(os.path.realpath(args.output))
+    )
+
+
+if __name__ == "__main__":
+    main()
+</file>
+
+<file path="merge/merge_noto.py">
+#!/usr/bin/env python
+#
+# Copyright 2014 Google Inc. All rights reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+"""Merges Noto fonts."""
+
+import os.path
+import tempfile
+
+from fontTools import merge, ttLib
+from fontTools.ttLib.tables import otTables
+from fontTools.unicodedata import ot_tags_from_script
+
+
+def make_font_name(script):
+    if script:
+        return "Noto Sans %s" % script
+    else:
+        return "Noto Sans"
+
+
+def make_puncless_font_name(script):
+    return make_font_name(script).replace(" ", "").replace("-", "")
+
+
+def make_font_file_name(script, weight, directory="individual/unhinted"):
+    filename = f"{directory}/{make_puncless_font_name(script)}-{weight}.ttf"
+    return filename
+
+
+def add_ui_alternative(table, target):
+    new_target = target + " UI"
+    sources = table[target]
+    new_sources = [source + " UI" for source in sources]
+    table[new_target] = new_sources
+
+
+def has_gsub_table(fontfile):
+    font = ttLib.TTFont(fontfile)
+    return "GSUB" in font
+
+
+SCRIPT_TO_OPENTYPE_SCRIPT_TAG = {
+    "CypriotSyllabary": "cprt",
+    "Deseret": "dsrt",
+    "Glagolitic": "glag",
+    "Lisu": "lisu",
+    "Ogham": "ogam",
+    "OldItalic": "ital",
+    "Runic": "runr",
+    "Shavian": "shaw",
+    "Vai": "vai ",
+    "Carian": "cari",
+    "EgyptianHieroglyphs": "egyp",
+    "ImperialAramaic": "armi",
+    "LinearB": "linb",
+    "Lycian": "lyci",
+    "Lydian": "lydi",
+    "OldPersian": "xpeo",
+    "OldSouthArabian": "sarb",
+    "OldTurkic": "orkh",
+    "Osmanya": "osma",
+    "Phoenician": "phnx",
+    "SumeroAkkadianCuneiform": "xsux",
+    "Ugaritic": "ugar",
+    "OlChiki": "olck",
+    "TaiLe": "tale",
+    # Following keys are added to satisfy the use case in merge_fonts.py
+    # Reference:
+    # https://www.google.com/get/noto/#sans-xsux
+    # https://www.google.com/get/noto/#sans-cprt
+    # https://www.google.com/get/noto/#sans-yiii
+    # https://www.microsoft.com/typography/otspec/scripttags.htm
+    "Cuneiform": "xsux",
+    "Cypriot": "cprt",
+    "Yi": "yi  ",
+}
+
+
+def get_opentype_script_tags(fontfile):
+    scripts = []
+    dirname = os.path.split(os.path.dirname(fontfile))[1]
+    isoscripts = dirname[1:-1].split("__")
+    for isoscript in isoscripts:
+        scripts += ot_tags_from_script(isoscript)
+    if not len(scripts):
+        fontfile = os.path.basename(fontfile)
+        if fontfile.startswith("NotoSans-"):
+            fontfile = fontfile[8:]
+        fontfile = fontfile[: fontfile.index("-")]
+        scripts = [SCRIPT_TO_OPENTYPE_SCRIPT_TAG.get(fontfile, "DFLT")]
+    return scripts
+
+
+def add_gsub_to_font(fontfile):
+    """Adds an empty GSUB table to a font."""
+    font = ttLib.TTFont(fontfile)
+    gsub_table = ttLib.getTableClass("GSUB")("GSUB")
+    gsub_table.table = otTables.GSUB()
+    gsub_table.table.Version = 1.0
+    gsub_table.table.ScriptList = otTables.ScriptList()
+    gsub_table.table.ScriptCount = 1
+    gsub_table.table.LookupList = otTables.LookupList()
+    gsub_table.table.LookupList.LookupCount = 0
+    gsub_table.table.LookupList.Lookup = []
+    gsub_table.table.FeatureList = otTables.FeatureList()
+    gsub_table.table.FeatureList.FeatureCount = 0
+    gsub_table.table.LookupList.FeatureRecord = []
+
+    for script in get_opentype_script_tags(fontfile):
+        script_record = otTables.ScriptRecord()
+        script_record.ScriptTag = script
+        script_record.Script = otTables.Script()
+        script_record.Script.LangSysCount = 0
+        script_record.Script.LangSysRecord = []
+
+    default_lang_sys = otTables.DefaultLangSys()
+    default_lang_sys.FeatureIndex = []
+    default_lang_sys.FeatureCount = 0
+    default_lang_sys.LookupOrder = None
+    default_lang_sys.ReqFeatureIndex = 65535
+    script_record.Script.DefaultLangSys = default_lang_sys
+
+    gsub_table.table.ScriptList.ScriptRecord = [script_record]
+
+    font["GSUB"] = gsub_table
+
+    target_file = tempfile.gettempdir() + "/" + os.path.basename(fontfile)
+    font.save(target_file)
+    return target_file
+
+
+def main():
+    merge_table = {
+        "Historic": [
+            "Avestan",
+            "Carian",
+            "Egyptian Hieroglyphs",
+            "Imperial Aramaic",
+            "Pahlavi",  # Should be 'Inscriptional Pahlavi',
+            "Parthian",  # Should be 'Inscriptional Parthian',
+            "Linear B",
+            "Lycian",
+            "Lydian",
+            "Mandaic",
+            "Old Persian",
+            "Old South Arabian",
+            "Old Turkic",
+            "Osmanya",
+            "Phags-Pa",
+            "Phoenician",
+            "Samaritan",
+            "Sumero-Akkadian Cuneiform",
+            "Ugaritic",
+        ],
+        "South Asian": [
+            "Devanagari",
+            "Bengali",
+            "Gurmukhi",
+            "Gujarati",
+            "Oriya",
+            "Tamil",
+            "Telugu",
+            "Kannada",
+            "Malayalam",
+            "Sinhala",
+            "Thaana",
+            "Brahmi",
+            "Kaithi",
+            "Kharoshthi",  # Move to Historic?
+            "Lepcha",
+            "Limbu",
+            "Meetei Mayek",
+            "Ol Chiki",
+            "Saurashtra",
+            "Syloti Nagri",
+        ],
+        "Southeast Asian": [
+            "Thai",
+            "Lao",
+            "Khmer",
+            "Batak",
+            "Buginese",
+            "Buhid",
+            "Cham",
+            "Hanunoo",
+            "Javanese",
+            "Kayah Li",
+            "New Tai Lue",
+            "Rejang",
+            "Sundanese",
+            "Tagalog",
+            "Tagbanwa",
+            "Tai Le",
+            "Tai Tham",
+            "Tai Viet",
+        ],
+        "": [  # LGC,
+            "Armenian",
+            "Bamum",
+            "Canadian Aboriginal",
+            "Cherokee",
+            "Coptic",
+            "Cypriot Syllabary",
+            "Deseret",
+            "Ethiopic",
+            "Georgian",
+            "Glagolitic",
+            "Gothic",
+            "Hebrew",
+            "Lisu",
+            "NKo",
+            "Ogham",
+            "Old Italic",
+            "Runic",
+            "Shavian",
+            "Tifinagh",
+            "Vai",
+        ],
+    }
+
+    add_ui_alternative(merge_table, "South Asian")
+    add_ui_alternative(merge_table, "Southeast Asian")
+
+    for merge_target in sorted(merge_table):
+        for weight in ["Regular", "Bold"]:
+            merger = merge.Merger()
+            source_fonts = merge_table[merge_target]
+            if "" not in source_fonts:
+                source_fonts = [""] + source_fonts  # The LGC font
+            regular_sources = [
+                make_font_file_name(script, weight) for script in source_fonts
+            ]
+            regular_sources = [font for font in regular_sources if os.path.isfile(font)]
+
+            if len(regular_sources) <= 1:
+                continue
+
+            print(f"Merging Noto Sans {merge_target} {weight}")
+
+            for index, fontfile in enumerate(regular_sources):
+                if not has_gsub_table(fontfile):
+                    regular_sources[index] = add_gsub_to_font(fontfile)
+
+            font = merger.merge(regular_sources)
+
+            first_font = source_fonts[0]
+            if first_font != merge_target:
+                for name_record in font["name"].names:
+                    name = unicode(name_record.string, "UTF-16BE")
+                    name = name.replace(
+                        make_font_name(first_font), make_font_name(merge_target)
+                    )
+                    name = name.replace(
+                        make_puncless_font_name(first_font),
+                        make_puncless_font_name(merge_target),
+                    )
+                    name_record.string = name.encode("UTF-16BE")
+
+            font.save(
+                make_font_file_name(merge_target, weight, directory="combined/unhinted")
+            )
+
+
+if __name__ == "__main__":
+    main()
+</file>
+
+<file path="merge/sort_fonts.py">
+#!/usr/bin/env python3
+import sys
+
+import yaml
+from fontTools import ttLib
+
+try:
+    y = sys.argv[1]
+except:
+    print("provide YAML file path")
+    sys.exit(2)
+
+files = None
+with open(y) as stream:
+    try:
+        files = yaml.safe_load(stream)
+    except yaml.YAMLError as exc:
+        print(exc)
+
+if files:
+    psort = {}
+    for p in files:
+        u2n = None
+        ttx = ttLib.TTFont(p)
+        cmap = ttx["cmap"].getcmap(3, 10)
+        if not cmap:
+            cmap = ttx["cmap"].getcmap(3, 1)
+        if not cmap:
+            cmap = ttx["cmap"].getcmap(0, 4)
+        if not cmap:
+            cmap = ttx["cmap"].getcmap(0, 3)
+        if cmap:
+            u2n = {
+                u: n for u, n in cmap.cmap.items() if u not in range(0xE000, 0xF8FF + 1)
+            }
+        if u2n:
+            us = list(u2n.keys())
+            repru = us[int(len(us) * 0.5)]
+            psort[p] = repru
+    psort = sorted(psort, key=psort.get)
+    with open(y, "w") as stream:
+        try:
+            yaml.safe_dump(psort, stream)
+        except yaml.YAMLError as exc:
+            print(exc)
+</file>
+
+<file path="README.md">
+# Toto fonts
+This repository hosts “last good” (from my perspective) versions of Google’s [Noto fonts](https://github.com/googlei18n/noto-fonts/) from September 23, 2015, which were published under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html). After that date, the license was changed to OFL, along with a few other Apache 2-licensed Google fonts (Droid and Open Sans). The Apache 2 license allows very flexible creation of derivative works, while the OFL license is more copyleft and prohibits certain use cases. 
+
+The fonts are grouped by style, then by the ISO 15924 script codes dominant in each font’s glyph repertoire. 
+
+* Also see [Toto Han fonts](https://github.com/twardoch/toto-han-fonts)
+
+— Adam Twardoch, Nov 27, 2015
+</file>
+
+</files>
