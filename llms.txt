@@ -1,242 +1,178 @@
-This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+Project Structure:
+📁 toto-fonts
+├── 📁 merge
+│   ├── 📁 yaml
+│   │   ├── 📄 basic-sans-reg.yaml
+│   │   ├── 📄 basic-serif-reg.yaml
+│   │   ├── 📄 sans-bol.yaml
+│   │   ├── 📄 sans-bolita.yaml
+│   │   ├── 📄 sans-ita.yaml
+│   │   ├── 📄 sans-reg.yaml
+│   │   ├── 📄 serif-bol.yaml
+│   │   ├── 📄 serif-bolita.yaml
+│   │   ├── 📄 serif-ita.yaml
+│   │   └── 📄 serif-reg.yaml
+│   ├── 📄 all-merge.command
+│   ├── 📄 makeyamls.command
+│   ├── 📄 merge_fonts.py
+│   ├── 📄 merge_noto.py
+│   └── 📄 sort_fonts.py
+├── 📁 ttf
+│   ├── 📁 other
+│   │   ├── 📁 _Arab_
+│   │   ├── 📁 _Hani__Kana__Hira_
+│   │   ├── 📁 _Hani__Latn__Hang__Kana__Hira_
+│   │   ├── 📁 _Latn__Cyrl__Grek_
+│   │   ├── 📁 _Latn__Cyrl__Grek__Hebr_
+│   │   ├── 📁 _Latn__Grek__Cyrl__Hebr_
+│   │   └── 📁 _Zzzz_
+│   ├── 📁 sans-bol
+│   │   ├── 📁 _Armn_
+│   │   ├── 📁 _Beng_
+│   │   ├── 📁 _Cham_
+│   │   ├── 📁 _Deva_
+│   │   ├── 📁 _Ethi_
+│   │   ├── 📁 _Geor_
+│   │   ├── 📁 _Gujr_
+│   │   ├── 📁 _Guru_
+│   │   ├── 📁 _Hebr_
+│   │   ├── 📁 _Khmr_
+│   │   ├── 📁 _Knda_
+│   │   ├── 📁 _Laoo_
+│   │   ├── 📁 _Latn__Grek__Cyrl_
+│   │   ├── 📁 _Mlym_
+│   │   ├── 📁 _Mymr_
+│   │   ├── 📁 _Orya_
+│   │   ├── 📁 _Sinh_
+│   │   ├── 📁 _Taml_
+│   │   ├── 📁 _Telu_
+│   │   ├── 📁 _Thaa_
+│   │   ├── 📁 _Thai_
+│   │   └── 📁 _Tibt_
+│   ├── 📁 sans-bolita
+│   │   └── 📁 _Latn__Grek__Cyrl_
+│   ├── 📁 sans-ita
+│   │   └── 📁 _Latn__Grek__Cyrl_
+│   ├── 📁 sans-reg
+│   │   ├── 📁 _Armi_
+│   │   ├── 📁 _Armn_
+│   │   ├── 📁 _Avst_
+│   │   ├── 📁 _Bali_
+│   │   ├── 📁 _Bamu_
+│   │   ├── 📁 _Batk_
+│   │   ├── 📁 _Beng_
+│   │   ├── 📁 _Brah_
+│   │   ├── 📁 _Bugi_
+│   │   ├── 📁 _Buhd_
+│   │   ├── 📁 _Cans_
+│   │   ├── 📁 _Cari_
+│   │   ├── 📁 _Cham_
+│   │   ├── 📁 _Cher_
+│   │   ├── 📁 _Copt_
+│   │   ├── 📁 _Cprt_
+│   │   ├── 📁 _Deva_
+│   │   ├── 📁 _Dsrt_
+│   │   ├── 📁 _Egyp_
+│   │   ├── 📁 _Egyp__Xsux__Linb__Latn__Orkh_
+│   │   ├── 📁 _Ethi_
+│   │   ├── 📁 _Geor_
+│   │   ├── 📁 _Glag_
+│   │   ├── 📁 _Goth_
+│   │   ├── 📁 _Gujr_
+│   │   ├── 📁 _Guru_
+│   │   ├── 📁 _Hano_
+│   │   ├── 📁 _Hebr_
+│   │   ├── 📁 _Ital_
+│   │   ├── 📁 _Java_
+│   │   ├── 📁 _Kali_
+│   │   ├── 📁 _Khar_
+│   │   ├── 📁 _Khmr_
+│   │   ├── 📁 _Knda_
+│   │   ├── 📁 _Kthi_
+│   │   ├── 📁 _Lana_
+│   │   ├── 📁 _Laoo_
+│   │   ├── 📁 _Latn__Grek__Cyrl_
+│   │   ├── 📁 _Lepc_
+│   │   ├── 📁 _Limb_
+│   │   ├── 📁 _Linb_
+│   │   ├── 📁 _Lisu_
+│   │   ├── 📁 _Lyci_
+│   │   ├── 📁 _Lydi_
+│   │   ├── 📁 _Mand_
+│   │   ├── 📁 _Mlym_
+│   │   ├── 📁 _Mong_
+│   │   ├── 📁 _Mtei_
+│   │   ├── 📁 _Mymr_
+│   │   ├── 📁 _Nkoo_
+│   │   ├── 📁 _Ogam_
+│   │   ├── 📁 _Olck_
+│   │   ├── 📁 _Orkh_
+│   │   ├── 📁 _Orya_
+│   │   ├── 📁 _Osma_
+│   │   ├── 📁 _Phag_
+│   │   ├── 📁 _Phli_
+│   │   ├── 📁 _Phnx_
+│   │   ├── 📁 _Prti_
+│   │   ├── 📁 _Rjng_
+│   │   ├── 📁 _Runr_
+│   │   ├── 📁 _Samr_
+│   │   ├── 📁 _Sarb_
+│   │   ├── 📁 _Saur_
+│   │   ├── 📁 _Shaw_
+│   │   ├── 📁 _Sinh_
+│   │   ├── 📁 _Sund_
+│   │   ├── 📁 _Sylo_
+│   │   ├── 📁 _Syrc_
+│   │   ├── 📁 _Tagb_
+│   │   ├── 📁 _Tale_
+│   │   ├── 📁 _Talu_
+│   │   ├── 📁 _Taml_
+│   │   ├── 📁 _Tavt_
+│   │   ├── 📁 _Telu_
+│   │   ├── 📁 _Tfng_
+│   │   ├── 📁 _Tglg_
+│   │   ├── 📁 _Thaa_
+│   │   ├── 📁 _Thai_
+│   │   ├── 📁 _Tibt_
+│   │   ├── 📁 _Ugar_
+│   │   ├── 📁 _Vaii_
+│   │   ├── 📁 _Xpeo_
+│   │   ├── 📁 _Xsux_
+│   │   ├── 📁 _Yiii_
+│   │   └── 📁 _Zsym_
+│   ├── 📁 serif-bol
+│   │   ├── 📁 _Armn_
+│   │   ├── 📁 _Geor_
+│   │   ├── 📁 _Khmr_
+│   │   ├── 📁 _Laoo_
+│   │   ├── 📁 _Latn__Grek__Cyrl_
+│   │   └── 📁 _Thai_
+│   ├── 📁 serif-bolita
+│   │   └── 📁 _Latn__Grek__Cyrl_
+│   ├── 📁 serif-ita
+│   │   └── 📁 _Latn__Grek__Cyrl_
+│   └── 📁 serif-reg
+│       ├── 📁 _Armn_
+│       ├── 📁 _Geor_
+│       ├── 📁 _Khmr_
+│       ├── 📁 _Laoo_
+│       ├── 📁 _Latn__Grek__Cyrl_
+│       └── 📁 _Thai_
+├── 📁 ttf_merged
+├── 📁 ttf_merged1
+├── 📄 .gitignore
+├── 📄 CHANGELOG.md
+├── 📄 LICENSE
+├── 📄 PLAN.md
+├── 📄 README.md
+├── 📄 REFACTOR_FILELIST.txt
+└── 📄 TODO.md
 
-<file_summary>
-This section contains a summary of this file.
 
-<purpose>
-This file contains a packed representation of the entire repository's contents.
-It is designed to be easily consumable by AI systems for analysis, code review,
-or other automated processes.
-</purpose>
-
-<file_format>
-The content is organized as follows:
-1. This summary section
-2. Repository information
-3. Directory structure
-4. Repository files (if enabled)
-5. Multiple file entries, each consisting of:
-  - File path as an attribute
-  - Full contents of the file
-</file_format>
-
-<usage_guidelines>
-- This file should be treated as read-only. Any changes should be made to the
-  original repository files, not this packed version.
-- When processing this file, use the file path to distinguish
-  between different files in the repository.
-- Be aware that this file may contain sensitive information. Handle it with
-  the same level of security as you would the original repository.
-</usage_guidelines>
-
-<notes>
-- Some files may have been excluded based on .gitignore rules and Repomix's configuration
-- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
-- Files matching patterns in .gitignore are excluded
-- Files matching default ignore patterns are excluded
-- Files are sorted by Git change count (files with more changes are at the bottom)
-</notes>
-
-</file_summary>
-
-<directory_structure>
-merge/
-  yaml/
-    basic-sans-reg.yaml
-    basic-serif-reg.yaml
-    sans-bol.yaml
-    sans-bolita.yaml
-    sans-ita.yaml
-    sans-reg.yaml
-    serif-bol.yaml
-    serif-bolita.yaml
-    serif-ita.yaml
-    serif-reg.yaml
-  all-merge.command
-  makeyamls.command
-  merge_fonts.py
-  merge_noto.py
-  sort_fonts.py
-.gitignore
-LICENSE
-README.md
-</directory_structure>
-
-<files>
-This section contains the contents of the repository's files.
-
-<file path="merge/yaml/basic-sans-reg.yaml">
-- ../ttf/sans-reg/_Latn__Grek__Cyrl_/NotoSans-LCG.ttf
-- ../ttf/sans-reg/_Zsym_/NotoSans-Symbols.ttf
-- ../ttf/other/_Zzzz_/DroidEmoji.ttf
-- ../ttf/sans-reg/_Armn_/NotoSans-Armenian.ttf
-- ../ttf/sans-reg/_Geor_/NotoSans-Georgian.ttf
-</file>
-
-<file path="merge/yaml/basic-serif-reg.yaml">
-- ../ttf/serif-reg/_Latn__Grek__Cyrl_/NotoSerif-LCG.ttf
-- ../ttf/sans-reg/_Zsym_/NotoSans-Symbols.ttf
-- ../ttf/other/_Zzzz_/DroidEmoji.ttf
-- ../ttf/serif-reg/_Armn_/NotoSerif-Armenian.ttf
-- ../ttf/serif-reg/_Geor_/NotoSerif-Georgian.ttf
-</file>
-
-<file path="merge/yaml/sans-bol.yaml">
-- ../ttf/sans-bol/_Latn__Grek__Cyrl_/NotoSans-LCG-Bold.ttf
-- ../ttf/sans-bol/_Armn_/NotoSans-Armenian-Bold.ttf
-- ../ttf/sans-bol/_Geor_/NotoSans-Georgian-Bold.ttf
-- ../ttf/sans-bol/_Hebr_/NotoSans-Hebrew-Bold.ttf
-- ../ttf/sans-bol/_Thaa_/NotoSans-Thaana-Bold.ttf
-- ../ttf/sans-bol/_Deva_/NotoSans-Devanagari-Bold.ttf
-- ../ttf/sans-bol/_Beng_/NotoSans-Bengali-Bold.ttf
-- ../ttf/sans-bol/_Guru_/NotoSans-Gurmukhi-Bold.ttf
-- ../ttf/sans-bol/_Gujr_/NotoSans-Gujarati-Bold.ttf
-- ../ttf/sans-bol/_Orya_/NotoSans-Oriya-Bold.ttf
-- ../ttf/sans-bol/_Taml_/NotoSans-Tamil-Bold.ttf
-- ../ttf/sans-bol/_Telu_/NotoSans-Telugu-Bold.ttf
-- ../ttf/sans-bol/_Knda_/NotoSans-Kannada-Bold.ttf
-- ../ttf/sans-bol/_Mlym_/NotoSans-Malayalam-Bold.ttf
-- ../ttf/sans-bol/_Sinh_/NotoSans-Sinhala-Bold.ttf
-- ../ttf/sans-bol/_Thai_/NotoSans-Thai-Bold.ttf
-- ../ttf/sans-bol/_Laoo_/NotoSans-Lao-Bold.ttf
-- ../ttf/sans-bol/_Tibt_/NotoSans-Tibetan-Bold.ttf
-- ../ttf/sans-bol/_Mymr_/NotoSans-Myanmar-Bold.ttf
-- ../ttf/sans-bol/_Ethi_/NotoSans-Ethiopic-Bold.ttf
-- ../ttf/sans-bol/_Khmr_/NotoSans-Khmer-Bold.ttf
-- ../ttf/sans-bol/_Cham_/NotoSans-Cham-Bold.ttf
-</file>
-
-<file path="merge/yaml/sans-bolita.yaml">
-- ../ttf/sans-bolita/_Latn__Grek__Cyrl_/NotoSans-LCG-BoldItalic.ttf
-</file>
-
-<file path="merge/yaml/sans-ita.yaml">
-- ../ttf/sans-ita/_Latn__Grek__Cyrl_/NotoSans-LCG-Italic.ttf
-</file>
-
-<file path="merge/yaml/sans-reg.yaml">
-- ../ttf/sans-reg/_Latn__Grek__Cyrl_/NotoSans-LCG.ttf
-- ../ttf/sans-reg/_Zsym_/NotoSans-Symbols.ttf
-- ../ttf/other/_Zzzz_/DroidEmoji.ttf
-- ../ttf/sans-reg/_Armn_/NotoSans-Armenian.ttf
-- ../ttf/sans-reg/_Geor_/NotoSans-Georgian.ttf
-- ../ttf/sans-reg/_Hebr_/NotoSans-Hebrew.ttf
-- ../ttf/other/_Arab_/NotoNaskhArabic.ttf
-- ../ttf/sans-reg/_Syrc_/NotoSans-SyriacEastern.ttf
-- ../ttf/sans-reg/_Syrc_/NotoSans-SyriacEstrangela.ttf
-- ../ttf/sans-reg/_Syrc_/NotoSans-SyriacWestern.ttf
-- ../ttf/sans-reg/_Thaa_/NotoSans-Thaana.ttf
-- ../ttf/sans-reg/_Nkoo_/NotoSans-NKo.ttf
-- ../ttf/sans-reg/_Samr_/NotoSans-Samaritan.ttf
-- ../ttf/sans-reg/_Mand_/NotoSans-Mandaic.ttf
-- ../ttf/sans-reg/_Deva_/NotoSans-Devanagari.ttf
-- ../ttf/sans-reg/_Beng_/NotoSans-Bengali.ttf
-- ../ttf/sans-reg/_Guru_/NotoSans-Gurmukhi.ttf
-- ../ttf/sans-reg/_Gujr_/NotoSans-Gujarati.ttf
-- ../ttf/sans-reg/_Orya_/NotoSans-Oriya.ttf
-- ../ttf/sans-reg/_Taml_/NotoSans-Tamil.ttf
-- ../ttf/sans-reg/_Telu_/NotoSans-Telugu.ttf
-- ../ttf/sans-reg/_Knda_/NotoSans-Kannada.ttf
-- ../ttf/sans-reg/_Mlym_/NotoSans-Malayalam.ttf
-- ../ttf/sans-reg/_Sinh_/NotoSans-Sinhala.ttf
-- ../ttf/sans-reg/_Thai_/NotoSans-Thai.ttf
-- ../ttf/sans-reg/_Laoo_/NotoSans-Lao.ttf
-- ../ttf/sans-reg/_Tibt_/NotoSans-Tibetan.ttf
-- ../ttf/sans-reg/_Mymr_/NotoSans-Myanmar.ttf
-- ../ttf/sans-reg/_Ethi_/NotoSans-Ethiopic.ttf
-- ../ttf/sans-reg/_Cher_/NotoSans-Cherokee.ttf
-- ../ttf/sans-reg/_Cans_/NotoSans-CanadianAboriginal.ttf
-- ../ttf/sans-reg/_Ogam_/NotoSans-Ogham.ttf
-- ../ttf/sans-reg/_Runr_/NotoSans-Runic.ttf
-- ../ttf/sans-reg/_Tglg_/NotoSans-Tagalog.ttf
-- ../ttf/sans-reg/_Hano_/NotoSans-Hanunoo.ttf
-- ../ttf/sans-reg/_Buhd_/NotoSans-Buhid.ttf
-- ../ttf/sans-reg/_Tagb_/NotoSans-Tagbanwa.ttf
-- ../ttf/sans-reg/_Khmr_/NotoSans-Khmer.ttf
-- ../ttf/sans-reg/_Mong_/NotoSans-Mongolian.ttf
-- ../ttf/sans-reg/_Limb_/NotoSans-Limbu.ttf
-- ../ttf/sans-reg/_Tale_/NotoSans-TaiLe.ttf
-- ../ttf/sans-reg/_Talu_/NotoSans-NewTaiLue.ttf
-- ../ttf/sans-reg/_Bugi_/NotoSans-Buginese.ttf
-- ../ttf/sans-reg/_Lana_/NotoSans-TaiTham.ttf
-- ../ttf/sans-reg/_Bali_/NotoSans-Balinese.ttf
-- ../ttf/sans-reg/_Sund_/NotoSans-Sundanese.ttf
-- ../ttf/sans-reg/_Batk_/NotoSans-Batak.ttf
-- ../ttf/sans-reg/_Lepc_/NotoSans-Lepcha.ttf
-- ../ttf/sans-reg/_Olck_/NotoSans-OlChiki.ttf
-- ../ttf/sans-reg/_Glag_/NotoSans-Glagolitic.ttf
-- ../ttf/sans-reg/_Copt_/NotoSans-Coptic.ttf
-- ../ttf/sans-reg/_Tfng_/NotoSans-Tifinagh.ttf
-- ../ttf/sans-reg/_Yiii_/NotoSans-Yi.ttf
-- ../ttf/sans-reg/_Lisu_/NotoSans-Lisu.ttf
-- ../ttf/sans-reg/_Vaii_/NotoSans-Vai.ttf
-- ../ttf/sans-reg/_Sylo_/NotoSans-SylotiNagri.ttf
-- ../ttf/sans-reg/_Phag_/NotoSans-PhagsPa.ttf
-- ../ttf/sans-reg/_Saur_/NotoSans-Saurashtra.ttf
-- ../ttf/sans-reg/_Kali_/NotoSans-KayahLi.ttf
-- ../ttf/sans-reg/_Rjng_/NotoSans-Rejang.ttf
-- ../ttf/sans-reg/_Java_/NotoSans-Javanese.ttf
-- ../ttf/sans-reg/_Cham_/NotoSans-Cham.ttf
-- ../ttf/sans-reg/_Tavt_/NotoSans-TaiViet.ttf
-- ../ttf/sans-reg/_Mtei_/NotoSans-MeeteiMayek.ttf
-- ../ttf/sans-reg/_Linb_/NotoSans-LinearB.ttf
-- ../ttf/sans-reg/_Lyci_/NotoSans-Lycian.ttf
-- ../ttf/sans-reg/_Cari_/NotoSans-Carian.ttf
-- ../ttf/sans-reg/_Ital_/NotoSans-OldItalic.ttf
-- ../ttf/sans-reg/_Goth_/NotoSans-Gothic.ttf
-- ../ttf/sans-reg/_Ugar_/NotoSans-Ugaritic.ttf
-- ../ttf/sans-reg/_Xpeo_/NotoSans-OldPersian.ttf
-- ../ttf/sans-reg/_Dsrt_/NotoSans-Deseret.ttf
-- ../ttf/sans-reg/_Shaw_/NotoSans-Shavian.ttf
-- ../ttf/sans-reg/_Osma_/NotoSans-Osmanya.ttf
-- ../ttf/sans-reg/_Cprt_/NotoSans-Cypriot.ttf
-- ../ttf/sans-reg/_Armi_/NotoSans-ImperialAramaic.ttf
-- ../ttf/sans-reg/_Phnx_/NotoSans-Phoenician.ttf
-- ../ttf/sans-reg/_Lydi_/NotoSans-Lydian.ttf
-- ../ttf/sans-reg/_Khar_/NotoSans-Kharoshthi.ttf
-- ../ttf/sans-reg/_Sarb_/NotoSans-OldSouthArabian.ttf
-- ../ttf/sans-reg/_Avst_/NotoSans-Avestan.ttf
-- ../ttf/sans-reg/_Prti_/NotoSans-InscriptionalParthian.ttf
-- ../ttf/sans-reg/_Phli_/NotoSans-InscriptionalPahlavi.ttf
-- ../ttf/sans-reg/_Orkh_/NotoSans-OldTurkic.ttf
-- ../ttf/sans-reg/_Brah_/NotoSans-Brahmi.ttf
-- ../ttf/sans-reg/_Kthi_/NotoSans-Kaithi.ttf
-- ../ttf/sans-reg/_Egyp__Xsux__Linb__Latn__Orkh_/NotoSans-Historic.ttf
-- ../ttf/sans-reg/_Xsux_/NotoSans-Cuneiform.ttf
-- ../ttf/sans-reg/_Egyp_/NotoSans-EgyptianHieroglyphs.ttf
-- ../ttf/sans-reg/_Bamu_/NotoSans-Bamum.ttf
-</file>
-
-<file path="merge/yaml/serif-bol.yaml">
-- ../ttf/serif-bol/_Latn__Grek__Cyrl_/NotoSerif-LCG-Bold.ttf
-- ../ttf/serif-bol/_Armn_/NotoSerif-Armenian-Bold.ttf
-- ../ttf/serif-bol/_Geor_/NotoSerif-Georgian-Bold.ttf
-- ../ttf/serif-bol/_Thai_/NotoSerif-Thai-Bold.ttf
-- ../ttf/serif-bol/_Laoo_/NotoSerif-Lao-Bold.ttf
-- ../ttf/serif-bol/_Khmr_/NotoSerif-Khmer-Bold.ttf
-</file>
-
-<file path="merge/yaml/serif-bolita.yaml">
-- ../ttf/serif-bolita/_Latn__Grek__Cyrl_/NotoSerif-LCG-BoldItalic.ttf
-</file>
-
-<file path="merge/yaml/serif-ita.yaml">
-- ../ttf/serif-ita/_Latn__Grek__Cyrl_/NotoSerif-LCG-Italic.ttf
-</file>
-
-<file path="merge/yaml/serif-reg.yaml">
-- ../ttf/serif-reg/_Latn__Grek__Cyrl_/NotoSerif-LCG.ttf
-- ../ttf/sans-reg/_Zsym_/NotoSans-Symbols.ttf
-- ../ttf/other/_Zzzz_/DroidEmoji.ttf
-- ../ttf/serif-reg/_Armn_/NotoSerif-Armenian.ttf
-- ../ttf/serif-reg/_Geor_/NotoSerif-Georgian.ttf
-- ../ttf/other/_Arab_/NotoNaskhArabic.ttf
-- ../ttf/serif-reg/_Thai_/NotoSerif-Thai.ttf
-- ../ttf/serif-reg/_Laoo_/NotoSerif-Lao.ttf
-- ../ttf/serif-reg/_Khmr_/NotoSerif-Khmer.ttf
-</file>
-
-<file path=".gitignore">
+<documents>
+<document index="1">
+<source>.gitignore</source>
+<document_content>
 deps/
 
 # Other
@@ -333,10 +269,49 @@ ENV/
 # Rope project settings
 .ropeproject
 .DS_Store
-</file>
 
-<file path="LICENSE">
-Apache License
+</document_content>
+</document>
+
+<document index="2">
+<source>CHANGELOG.md</source>
+<document_content>
+# Changelog
+
+All notable changes to the toto-fonts project will be documented in this file.
+
+## Recent Changes (2025)
+
+### Changed
+- **Auto-commit: Save local changes** - Latest automated commit saving local modifications
+
+### Removed
+- **Deleted sans-reg-post3.ttf** - Removed obsolete post-processed font file
+
+### Added
+- **Created .gitignore** - Added Git ignore file to exclude compiled Python files, build artifacts, and OS-specific files
+
+### Fixed
+- **Deleted merge_noto.cpython-37.pyc** - Removed Python bytecode file that shouldn't be in version control
+
+### Earlier Changes (Historical)
+
+- **Merged fonts** - Initial font merging operations completed
+- **Reorganized** - Repository structure reorganization
+- **Updated README.md** - Documentation improvements
+- **Added OpenSans** - Included OpenSans font family
+- **Added Droid Emoji** - Included Droid Emoji font for emoji support
+
+## Project Background
+
+This repository preserves Google's Noto fonts from September 23, 2015, before the license change from Apache 2.0 to OFL. The Apache 2 license provides more flexibility for derivative works compared to the more restrictive OFL license.
+</document_content>
+</document>
+
+<document index="3">
+<source>LICENSE</source>
+<document_content>
+                                 Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
 
@@ -537,9 +512,594 @@ Apache License
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
-</file>
 
-<file path="merge/all-merge.command">
+
+</document_content>
+</document>
+
+<document index="4">
+<source>PLAN.md</source>
+<document_content>
+# Toto Fonts Improvement Plan
+
+## Executive Summary
+
+The toto-fonts project is a valuable repository of Google Noto fonts from before their license change to OFL. While functional, the codebase requires modernization, better organization, and improved deployment capabilities. This plan outlines comprehensive improvements to make the project more stable, maintainable, and user-friendly.
+
+## Current State Analysis
+
+### Strengths
+- Preserves historically important Apache 2.0 licensed versions of Noto fonts
+- Functional font merging system using fontTools
+- Organized directory structure by script and weight
+- Basic automation through shell scripts
+
+### Weaknesses
+- Outdated Python code (Python 3 shebang but uses Python 2 constructs like `unicode()`)
+- Missing dependency management (no requirements.txt or setup.py)
+- No error handling or validation in scripts
+- Limited documentation for users and developers
+- No CI/CD pipeline or automated testing
+- Hardcoded paths and assumptions about directory structure
+- Missing proper logging and debugging capabilities
+- No versioning system for merged fonts
+
+## Improvement Strategy
+
+### Phase 1: Code Modernization and Stability
+
+#### 1.1 Python Compatibility Updates
+- **Problem**: The code contains Python 2 constructs (e.g., `unicode()` in merge_noto.py:943) despite Python 3 shebangs
+- **Solution**: 
+  - Audit all Python scripts for Python 2/3 compatibility issues
+  - Replace `unicode()` with proper string handling
+  - Use `pathlib` for file path operations instead of string concatenation
+  - Add type hints for better code clarity and IDE support
+  - Ensure consistent use of Python 3.8+ features
+
+#### 1.2 Dependency Management
+- **Problem**: No explicit dependency tracking, making setup difficult
+- **Solution**:
+  - Create `requirements.txt` with pinned versions:
+    ```
+    fonttools==4.x.x
+    pyyaml==6.x.x
+    nototools==0.x.x
+    ```
+  - Create `setup.py` for proper package installation
+  - Add `pyproject.toml` for modern Python packaging
+  - Document Python version requirements
+
+#### 1.3 Error Handling and Validation
+- **Problem**: Scripts fail silently or with cryptic errors
+- **Solution**:
+  - Add comprehensive try-except blocks with meaningful error messages
+  - Validate input files exist before processing
+  - Check font file integrity before merging
+  - Implement rollback mechanisms for failed merges
+  - Add progress indicators for long-running operations
+
+### Phase 2: Architecture and Design Improvements
+
+#### 2.1 Modular Design
+- **Problem**: Monolithic scripts with mixed concerns
+- **Solution**:
+  - Extract font merging logic into a reusable library
+  - Separate configuration from code
+  - Create abstract base classes for font processors
+  - Implement plugin architecture for custom merge strategies
+
+#### 2.2 Configuration Management
+- **Problem**: Hardcoded paths and settings scattered throughout code
+- **Solution**:
+  - Create `config.yaml` or `config.ini` for all settings
+  - Support environment variables for deployment flexibility
+  - Implement configuration validation
+  - Add configuration templates and examples
+
+#### 2.3 Logging and Monitoring
+- **Problem**: Limited visibility into operations
+- **Solution**:
+  - Replace print statements with proper logging
+  - Implement configurable log levels
+  - Add structured logging for better parsing
+  - Create log rotation policies
+  - Add performance metrics collection
+
+### Phase 3: Testing and Quality Assurance
+
+#### 3.1 Unit Testing
+- **Problem**: No automated tests
+- **Solution**:
+  - Create test suite using pytest
+  - Add unit tests for all core functions
+  - Implement fixtures for test font files
+  - Achieve >80% code coverage
+
+#### 3.2 Integration Testing
+- **Problem**: No validation of merged font quality
+- **Solution**:
+  - Test complete merge workflows
+  - Validate merged font properties
+  - Check character coverage preservation
+  - Verify metrics consistency
+
+#### 3.3 Continuous Integration
+- **Problem**: No automated quality checks
+- **Solution**:
+  - Set up GitHub Actions workflow
+  - Run tests on multiple Python versions
+  - Add linting with flake8/black
+  - Implement security scanning
+  - Create automated release process
+
+### Phase 4: Documentation and User Experience
+
+#### 4.1 User Documentation
+- **Problem**: Minimal usage instructions
+- **Solution**:
+  - Create comprehensive README with:
+    - Quick start guide
+    - Installation instructions
+    - Usage examples
+    - Troubleshooting section
+  - Add inline code documentation
+  - Create API documentation with Sphinx
+  - Add example configurations
+
+#### 4.2 Developer Documentation
+- **Problem**: No contribution guidelines
+- **Solution**:
+  - Create CONTRIBUTING.md
+  - Document code architecture
+  - Add development setup guide
+  - Create coding standards document
+
+### Phase 5: Deployment and Distribution
+
+#### 5.1 Packaging
+- **Problem**: No easy distribution method
+- **Solution**:
+  - Create pip-installable package
+  - Add Dockerfile for containerized deployment
+  - Create platform-specific installers
+  - Publish to PyPI
+
+#### 5.2 Web Interface
+- **Problem**: Command-line only interface
+- **Solution**:
+  - Create simple Flask/FastAPI web UI
+  - Add drag-and-drop font upload
+  - Implement real-time merge progress
+  - Provide download links for merged fonts
+
+#### 5.3 Pre-built Fonts
+- **Problem**: Users must merge fonts themselves
+- **Solution**:
+  - Create GitHub releases with pre-merged fonts
+  - Implement automated nightly builds
+  - Provide CDN hosting for web fonts
+  - Create npm package for web developers
+
+### Phase 6: Advanced Features
+
+#### 6.1 Font Optimization
+- **Problem**: Merged fonts can be large
+- **Solution**:
+  - Implement subsetting options
+  - Add compression support
+  - Create web-optimized versions
+  - Implement smart glyph deduplication
+
+#### 6.2 Metadata Preservation
+- **Problem**: Licensing and metadata may be lost
+- **Solution**:
+  - Preserve all source font metadata
+  - Generate comprehensive license files
+  - Add provenance tracking
+  - Create metadata reports
+
+#### 6.3 Customization Options
+- **Problem**: Limited merge customization
+- **Solution**:
+  - Add script priority configuration
+  - Implement custom glyph selection
+  - Allow metric override options
+  - Support font family renaming
+
+## Implementation Timeline
+
+### Month 1-2: Foundation
+- Python modernization
+- Dependency management
+- Basic testing framework
+- Initial documentation updates
+
+### Month 3-4: Core Improvements
+- Error handling implementation
+- Modular architecture refactoring
+- Configuration system
+- Logging infrastructure
+
+### Month 5-6: Quality and Automation
+- Complete test coverage
+- CI/CD pipeline
+- Automated builds
+- Performance optimization
+
+### Month 7-8: User Experience
+- Web interface development
+- Packaging and distribution
+- Documentation completion
+- Community engagement
+
+## Success Metrics
+
+1. **Code Quality**
+   - 0 Python 2/3 compatibility issues
+   - >80% test coverage
+   - <5% code duplication
+   - All functions documented
+
+2. **Reliability**
+   - <1% merge failure rate
+   - Comprehensive error messages
+   - Automated rollback on failures
+   - Performance regression tests passing
+
+3. **Usability**
+   - <5 minute setup time for new users
+   - One-command installation
+   - Clear documentation with examples
+   - Active community support
+
+4. **Performance**
+   - <30 second merge time for typical fonts
+   - <100MB memory usage
+   - Parallelized operations where possible
+   - Optimized font file sizes
+
+## Risk Mitigation
+
+1. **Backward Compatibility**
+   - Maintain legacy script interfaces
+   - Provide migration guides
+   - Support old configuration formats
+   - Gradual deprecation process
+
+2. **Font License Compliance**
+   - Clear documentation of license terms
+   - Automated license checking
+   - Metadata preservation
+   - Legal review of distribution
+
+3. **Technical Debt**
+   - Incremental refactoring approach
+   - Maintain working state always
+   - Feature flags for new functionality
+   - Comprehensive rollback procedures
+
+## Conclusion
+
+This improvement plan transforms toto-fonts from a functional but dated tool into a modern, robust, and user-friendly font management system. By focusing on code quality, user experience, and automation, we can ensure the project remains valuable and maintainable for years to come. The phased approach allows for continuous delivery of improvements while maintaining stability throughout the modernization process.
+</document_content>
+</document>
+
+<document index="5">
+<source>README.md</source>
+<document_content>
+# Toto fonts
+This repository hosts “last good” (from my perspective) versions of Google’s [Noto fonts](https://github.com/googlei18n/noto-fonts/) from September 23, 2015, which were published under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html). After that date, the license was changed to OFL, along with a few other Apache 2-licensed Google fonts (Droid and Open Sans). The Apache 2 license allows very flexible creation of derivative works, while the OFL license is more copyleft and prohibits certain use cases. 
+
+The fonts are grouped by style, then by the ISO 15924 script codes dominant in each font’s glyph repertoire. 
+
+* Also see [Toto Han fonts](https://github.com/twardoch/toto-han-fonts)
+
+— Adam Twardoch, Nov 27, 2015
+
+</document_content>
+</document>
+
+<document index="6">
+<source>REFACTOR_FILELIST.txt</source>
+<document_content>
+6668	./ttf_merged/sans-reg.ttf
+6667	./ttf_merged1/sans-reg.ttf
+3848	./ttf/other/_Hani__Latn__Hang__Kana__Hira_/DroidSans-Fallback.ttf
+2081	./ttf_merged1/sans-bol.ttf
+1947	./ttf_merged/sans-bol.ttf
+1702	./ttf_merged/serif-reg.ttf
+1460	./ttf_merged/basic-serif-reg.ttf
+1387	./ttf_merged1/sans-reg-basic.ttf
+1387	./ttf_merged1/sans-reg-basic-nopost.ttf
+1387	./ttf_merged/basic-sans-reg.ttf
+1158	./ttf/sans-reg/_Egyp__Xsux__Linb__Latn__Orkh_/NotoSans-Historic.ttf
+1146	./ttf/other/_Hani__Kana__Hira_/DroidSans-Japanese.ttf
+754	./ttf/sans-reg/_Zsym_/NotoSans-Symbols.ttf
+692	./ttf/sans-reg/_Tibt_/NotoSans-Tibetan.ttf
+652	./ttf/sans-bol/_Tibt_/NotoSans-Tibetan-Bold.ttf
+652	./ttf_merged1/serif-bol.ttf
+642	./ttf/other/_Latn__Cyrl__Grek__Hebr_/Tinos.ttf
+640	./ttf_merged1/serif-reg.ttf
+614	./ttf/other/_Latn__Cyrl__Grek__Hebr_/Tinos-Italic.ttf
+602	./ttf/other/_Latn__Cyrl__Grek__Hebr_/Tinos-Bold.ttf
+600	./ttf/other/_Latn__Cyrl__Grek__Hebr_/Tinos-BoldItalic.ttf
+575	./ttf/other/_Latn__Cyrl__Grek__Hebr_/Arimo-Italic.ttf
+570	./ttf/other/_Latn__Cyrl__Grek__Hebr_/Arimo-BoldItalic.ttf
+569	./ttf/other/_Latn__Cyrl__Grek__Hebr_/Arimo-Bold.ttf
+567	./ttf/other/_Latn__Cyrl__Grek__Hebr_/Arimo.ttf
+537	./ttf_merged/serif-bol.ttf
+503	./ttf/sans-reg/_Egyp_/NotoSans-EgyptianHieroglyphs.ttf
+489	./ttf/sans-reg/_Xsux_/NotoSans-Cuneiform.ttf
+485	./ttf/other/_Arab_/NotoNastaliqUrdu.ttf
+391	./ttf/serif-bol/_Latn__Grek__Cyrl_/NotoSerif-LCG-Bold.ttf
+371	./ttf/serif-reg/_Latn__Grek__Cyrl_/NotoSerif-LCG.ttf
+356	./ttf/serif-bolita/_Latn__Grek__Cyrl_/NotoSerif-LCG-BoldItalic.ttf
+346	./ttf/serif-ita/_Latn__Grek__Cyrl_/NotoSerif-LCG-Italic.ttf
+318	./ttf/other/_Zzzz_/DroidEmoji.ttf
+303	./ttf/sans-bol/_Latn__Grek__Cyrl_/NotoSans-LCG-Bold.ttf
+301	./ttf/other/_Latn__Grek__Cyrl__Hebr_/Cousine.ttf
+299	./ttf/sans-reg/_Latn__Grek__Cyrl_/NotoSans-LCG.ttf
+290	./ttf/other/_Latn__Grek__Cyrl__Hebr_/Cousine-Bold.ttf
+283	./ttf/sans-bolita/_Latn__Grek__Cyrl_/NotoSans-LCG-BoldItalic.ttf
+272	./ttf/sans-ita/_Latn__Grek__Cyrl_/NotoSans-LCG-Italic.ttf
+266	./ttf/other/_Latn__Grek__Cyrl__Hebr_/Cousine-BoldItalic.ttf
+264	./ttf/other/_Latn__Grek__Cyrl__Hebr_/Cousine-Italic.ttf
+258	./ttf/sans-reg/_Sinh_/NotoSans-Sinhala.ttf
+253	./ttf/sans-bol/_Sinh_/NotoSans-Sinhala-Bold.ttf
+249	./ttf/other/_Arab_/NotoNaskhArabic.ttf
+222	./ttf/sans-reg/_Ethi_/NotoSans-Ethiopic.ttf
+222	./ttf/other/_Arab_/NotoNaskhArabic-Bold.ttf
+219	./ttf/other/_Latn__Cyrl__Grek_/OpenSans-Bold.ttf
+217	./ttf/other/_Latn__Cyrl__Grek_/OpenSans-Extrabold.ttf
+217	./ttf/other/_Latn__Cyrl__Grek_/OpenSans-Light.ttf
+217	./ttf/sans-bol/_Ethi_/NotoSans-Ethiopic-Bold.ttf
+216	./ttf/other/_Latn__Cyrl__Grek_/OpenSans-Semibold.ttf
+212	./ttf/other/_Latn__Cyrl__Grek_/OpenSans.ttf
+208	./ttf/other/_Latn__Cyrl__Grek_/OpenSans-ExtraboldItalic.ttf
+208	./ttf/other/_Latn__Cyrl__Grek_/OpenSans-BoldItalic.ttf
+208	./ttf/other/_Latn__Cyrl__Grek_/OpenSans-LightItalic.ttf
+208	./ttf/other/_Latn__Cyrl__Grek_/OpenSans-Italic.ttf
+208	./ttf/other/_Latn__Cyrl__Grek_/OpenSans-SemiboldItalic.ttf
+205	./ttf/sans-reg/_Deva_/NotoSans-Devanagari.ttf
+202	./ttf/sans-bol/_Deva_/NotoSans-Devanagari-Bold.ttf
+187	./ttf/sans-bol/_Gujr_/NotoSans-Gujarati-Bold.ttf
+186	./ttf/sans-reg/_Gujr_/NotoSans-Gujarati.ttf
+178	./ttf/sans-bol/_Beng_/NotoSans-Bengali-Bold.ttf
+172	./ttf/sans-reg/_Beng_/NotoSans-Bengali.ttf
+168	./ttf/sans-bol/_Telu_/NotoSans-Telugu-Bold.ttf
+165	./ttf/sans-reg/_Telu_/NotoSans-Telugu.ttf
+162	./ttf/sans-reg/_Orya_/NotoSans-Oriya.ttf
+157	./ttf/sans-bol/_Orya_/NotoSans-Oriya-Bold.ttf
+151	./ttf/sans-bol/_Mymr_/NotoSans-Myanmar-Bold.ttf
+149	./ttf/sans-reg/_Mymr_/NotoSans-Myanmar.ttf
+135	./ttf/sans-reg/_Yiii_/NotoSans-Yi.ttf
+134	./ttf/sans-reg/_Knda_/NotoSans-Kannada.ttf
+133	./ttf/sans-bol/_Knda_/NotoSans-Kannada-Bold.ttf
+132	./ttf/sans-reg/_Mong_/NotoSans-Mongolian.ttf
+130	./ttf/sans-reg/_Bamu_/NotoSans-Bamum.ttf
+124	./ttf/serif-reg/_Khmr_/NotoSerif-Khmer.ttf
+117	./ttf/serif-bol/_Khmr_/NotoSerif-Khmer-Bold.ttf
+117	./ttf/other/_Latn__Cyrl__Grek_/DroidSansMono.ttf
+113	./ttf/sans-reg/_Lepc_/NotoSans-Lepcha.ttf
+92	./ttf/sans-bol/_Mlym_/NotoSans-Malayalam-Bold.ttf
+90	./ttf/sans-reg/_Mlym_/NotoSans-Malayalam.ttf
+78	./ttf/other/_Arab_/NotoKufiArabic-Bold.ttf
+78	./ttf/other/_Arab_/NotoKufiArabic.ttf
+62	./ttf/sans-reg/_Vaii_/NotoSans-Vai.ttf
+62	./ttf/sans-reg/_Kthi_/NotoSans-Kaithi.ttf
+57	./ttf/sans-reg/_Taml_/NotoSans-Tamil.ttf
+57	./ttf/sans-bol/_Taml_/NotoSans-Tamil-Bold.ttf
+56	./ttf/sans-reg/_Linb_/NotoSans-LinearB.ttf
+55	./ttf/sans-reg/_Syrc_/NotoSans-SyriacWestern.ttf
+53	./ttf/sans-reg/_Syrc_/NotoSans-SyriacEastern.ttf
+52	./ttf/sans-bol/_Guru_/NotoSans-Gurmukhi-Bold.ttf
+51	./ttf/sans-reg/_Guru_/NotoSans-Gurmukhi.ttf
+49	./ttf/sans-reg/_Syrc_/NotoSans-SyriacEstrangela.ttf
+48	./ttf/sans-reg/_Khmr_/NotoSans-Khmer.ttf
+46	./ttf/sans-bol/_Khmr_/NotoSans-Khmer-Bold.ttf
+45	./ttf/sans-reg/_Lana_/NotoSans-TaiTham.ttf
+45	./ttf/sans-reg/_Cans_/NotoSans-CanadianAboriginal.ttf
+41	./ttf/sans-reg/_Laoo_/NotoSans-Lao.ttf
+41	./ttf/serif-reg/_Laoo_/NotoSerif-Lao.ttf
+40	./ttf/serif-bol/_Laoo_/NotoSerif-Lao-Bold.ttf
+39	./ttf/sans-bol/_Laoo_/NotoSans-Lao-Bold.ttf
+36	./llms.txt
+35	./ttf/serif-reg/_Geor_/NotoSerif-Georgian.ttf
+34	./ttf/sans-reg/_Cher_/NotoSans-Cherokee.ttf
+34	./ttf/sans-reg/_Phag_/NotoSans-PhagsPa.ttf
+33	./ttf/sans-reg/_Thai_/NotoSans-Thai.ttf
+32	./ttf/serif-bol/_Geor_/NotoSerif-Georgian-Bold.ttf
+32	./ttf/sans-reg/_Java_/NotoSans-Javanese.ttf
+31	./ttf/sans-bol/_Geor_/NotoSans-Georgian-Bold.ttf
+31	./ttf/sans-reg/_Bali_/NotoSans-Balinese.ttf
+31	./ttf/sans-reg/_Geor_/NotoSans-Georgian.ttf
+29	./ttf/serif-reg/_Thai_/NotoSerif-Thai.ttf
+28	./ttf/serif-bol/_Thai_/NotoSerif-Thai-Bold.ttf
+28	./ttf/sans-bol/_Thai_/NotoSans-Thai-Bold.ttf
+27	./ttf/sans-bol/_Cham_/NotoSans-Cham-Bold.ttf
+27	./ttf/sans-reg/_Cham_/NotoSans-Cham.ttf
+26	./ttf/serif-bol/_Armn_/NotoSerif-Armenian-Bold.ttf
+26	./ttf/sans-bol/_Hebr_/NotoSans-Hebrew-Bold.ttf
+26	./ttf/sans-reg/_Hebr_/NotoSans-Hebrew.ttf
+25	./ttf/serif-reg/_Armn_/NotoSerif-Armenian.ttf
+25	./ttf/sans-bol/_Armn_/NotoSans-Armenian-Bold.ttf
+24	./ttf/sans-reg/_Armn_/NotoSans-Armenian.ttf
+23	./ttf/sans-reg/_Brah_/NotoSans-Brahmi.ttf
+22	./ttf/sans-bol/_Thaa_/NotoSans-Thaana-Bold.ttf
+22	./ttf/sans-reg/_Copt_/NotoSans-Coptic.ttf
+21	./ttf/sans-reg/_Thaa_/NotoSans-Thaana.ttf
+21	./ttf/sans-reg/_Khar_/NotoSans-Kharoshthi.ttf
+19	./ttf/sans-reg/_Saur_/NotoSans-Saurashtra.ttf
+18	./ttf/sans-reg/_Nkoo_/NotoSans-NKo.ttf
+16	./ttf/sans-reg/_Glag_/NotoSans-Glagolitic.ttf
+15	./ttf/sans-reg/_Tavt_/NotoSans-TaiViet.ttf
+15	./ttf/sans-reg/_Talu_/NotoSans-NewTaiLue.ttf
+15	./ttf/sans-reg/_Mtei_/NotoSans-MeeteiMayek.ttf
+15	./ttf/sans-reg/_Mand_/NotoSans-Mandaic.ttf
+14	./ttf/sans-reg/_Sylo_/NotoSans-SylotiNagri.ttf
+13	./ttf/sans-reg/_Batk_/NotoSans-Batak.ttf
+13	./ttf/sans-reg/_Tfng_/NotoSans-Tifinagh.ttf
+12	./ttf/sans-reg/_Avst_/NotoSans-Avestan.ttf
+12	./ttf/sans-reg/_Xpeo_/NotoSans-OldPersian.ttf
+11	./ttf/sans-reg/_Limb_/NotoSans-Limbu.ttf
+11	./LICENSE
+11	./ttf/sans-reg/_Sund_/NotoSans-Sundanese.ttf
+10	./ttf/sans-reg/_Dsrt_/NotoSans-Deseret.ttf
+9	./ttf/sans-reg/_Samr_/NotoSans-Samaritan.ttf
+8	./PLAN.md
+8	./merge/merge_noto.py
+8	./ttf/sans-reg/_Tale_/NotoSans-TaiLe.ttf
+8	./ttf/sans-reg/_Runr_/NotoSans-Runic.ttf
+8	./ttf/sans-reg/_Bugi_/NotoSans-Buginese.ttf
+7	./ttf/sans-reg/_Kali_/NotoSans-KayahLi.ttf
+7	./ttf/sans-reg/_Cprt_/NotoSans-Cypriot.ttf
+7	./ttf/sans-reg/_Orkh_/NotoSans-OldTurkic.ttf
+7	./ttf/sans-reg/_Prti_/NotoSans-InscriptionalParthian.ttf
+7	./ttf/sans-reg/_Olck_/NotoSans-OlChiki.ttf
+7	./ttf/sans-reg/_Osma_/NotoSans-Osmanya.ttf
+7	./ttf/sans-reg/_Hano_/NotoSans-Hanunoo.ttf
+6	./ttf/sans-reg/_Rjng_/NotoSans-Rejang.ttf
+6	./ttf/sans-reg/_Ugar_/NotoSans-Ugaritic.ttf
+6	./ttf/sans-reg/_Cari_/NotoSans-Carian.ttf
+6	./ttf/sans-reg/_Goth_/NotoSans-Gothic.ttf
+5	./ttf/sans-reg/_Shaw_/NotoSans-Shavian.ttf
+5	./ttf/sans-reg/_Phli_/NotoSans-InscriptionalPahlavi.ttf
+5	./ttf/sans-reg/_Lisu_/NotoSans-Lisu.ttf
+5	./ttf/sans-reg/_Tglg_/NotoSans-Tagalog.ttf
+5	./ttf/sans-reg/_Tagb_/NotoSans-Tagbanwa.ttf
+5	./ttf/sans-reg/_Armi_/NotoSans-ImperialAramaic.ttf
+5	./ttf/sans-reg/_Phnx_/NotoSans-Phoenician.ttf
+4	./ttf/sans-reg/_Ital_/NotoSans-OldItalic.ttf
+4	./ttf/sans-reg/_Buhd_/NotoSans-Buhid.ttf
+4	./ttf/sans-reg/_Sarb_/NotoSans-OldSouthArabian.ttf
+4	./merge/yaml/sans-reg.yaml
+4	./ttf/sans-reg/_Ogam_/NotoSans-Ogham.ttf
+4	./ttf/sans-reg/_Lyci_/NotoSans-Lycian.ttf
+4	./ttf/sans-reg/_Lydi_/NotoSans-Lydian.ttf
+4	./TODO.md
+3	./merge/merge_fonts.py
+
+</document_content>
+</document>
+
+<document index="7">
+<source>TODO.md</source>
+<document_content>
+# TODO List for Toto Fonts
+
+## Immediate Priority (Critical Fixes)
+
+- [ ] Fix Python 2/3 compatibility issue in merge_noto.py:943 (replace `unicode()` with proper string handling)
+- [ ] Create requirements.txt with dependencies (fonttools, pyyaml, nototools)
+- [ ] Add basic error handling to prevent silent failures in merge scripts
+- [ ] Fix hardcoded paths in shell scripts to use relative paths
+- [ ] Add file existence checks before processing fonts
+
+## Short Term (Code Quality)
+
+- [ ] Replace print statements with proper logging using Python logging module
+- [ ] Add command-line argument validation to all scripts
+- [ ] Create .github/workflows/test.yml for basic CI
+- [ ] Add type hints to Python functions
+- [ ] Replace string path operations with pathlib
+- [ ] Add progress indicators for merge operations
+- [ ] Create pytest test suite with basic tests
+- [ ] Add flake8 configuration and fix linting issues
+
+## Medium Term (Architecture)
+
+- [ ] Extract font merging logic into separate module
+- [ ] Create config.yaml for centralized configuration
+- [ ] Implement proper exception handling with meaningful error messages
+- [ ] Add setup.py for pip installation
+- [ ] Create Dockerfile for containerized deployment
+- [ ] Refactor duplicate code in merge scripts
+- [ ] Add font validation before and after merging
+- [ ] Implement proper logging with configurable levels
+
+## Long Term (Features)
+
+- [ ] Create web interface using Flask/FastAPI
+- [ ] Add font subsetting options to reduce file size
+- [ ] Implement parallel processing for batch operations
+- [ ] Create pre-merged font releases on GitHub
+- [ ] Add comprehensive documentation with Sphinx
+- [ ] Implement font optimization features
+- [ ] Create npm package for web developers
+- [ ] Add metadata preservation and reporting
+
+## Documentation
+
+- [ ] Update README.md with installation instructions
+- [ ] Add usage examples for all scripts
+- [ ] Create CONTRIBUTING.md with development guidelines
+- [ ] Document Python version requirements (3.8+)
+- [ ] Add troubleshooting section to README
+- [ ] Create API documentation for library usage
+- [ ] Add inline code comments and docstrings
+- [ ] Create architecture documentation
+
+## Testing
+
+- [ ] Set up pytest framework
+- [ ] Add unit tests for merge_fonts.py
+- [ ] Add unit tests for merge_noto.py
+- [ ] Add integration tests for complete workflows
+- [ ] Create test fixtures with sample fonts
+- [ ] Add GitHub Actions for automated testing
+- [ ] Implement code coverage reporting
+- [ ] Add performance benchmarks
+
+## DevOps
+
+- [ ] Create GitHub Actions workflow for CI/CD
+- [ ] Set up automated releases
+- [ ] Add security scanning with pip-audit
+- [ ] Implement automated dependency updates
+- [ ] Create release automation script
+- [ ] Add code quality badges to README
+- [ ] Set up issue templates
+- [ ] Configure Dependabot
+
+## User Experience
+
+- [ ] Create quick start guide
+- [ ] Add --help documentation to all scripts
+- [ ] Improve error messages with solutions
+- [ ] Create example YAML configurations
+- [ ] Add verbose mode to all operations
+- [ ] Create FAQ section
+- [ ] Add progress bars for long operations
+- [ ] Implement dry-run mode for testing
+
+## Performance
+
+- [ ] Profile and optimize merge operations
+- [ ] Implement caching for repeated operations
+- [ ] Add memory usage limits
+- [ ] Optimize font loading/saving
+- [ ] Parallelize independent operations
+- [ ] Reduce temporary file usage
+- [ ] Implement streaming for large fonts
+- [ ] Add performance metrics logging
+
+## Distribution
+
+- [ ] Package for PyPI distribution
+- [ ] Create Homebrew formula for macOS
+- [ ] Create snap package for Linux
+- [ ] Generate Windows installer
+- [ ] Publish Docker image to Docker Hub
+- [ ] Create conda package
+- [ ] Set up GitHub Pages for documentation
+- [ ] Create CDN for pre-merged fonts
+</document_content>
+</document>
+
+<document index="8">
+<source>merge/all-merge.command</source>
+<document_content>
 #!/usr/bin/env bash
 dir=${0%/*}; if [ "$dir" = "$0" ]; then dir="."; fi; cd "$dir";
 
@@ -550,9 +1110,13 @@ ls -1 yaml | while read y; do
 	python3 ./merge_fonts.py -f "yaml/$y" -o "../ttf_merged/$n.ttf";
 done;
 echo "# Done"
-</file>
 
-<file path="merge/makeyamls.command">
+</document_content>
+</document>
+
+<document index="9">
+<source>merge/makeyamls.command</source>
+<document_content>
 #!/usr/bin/env bash
 dir=${0%/*}; if [ "$dir" = "$0" ]; then dir="."; fi; cd "$dir";
 
@@ -565,457 +1129,272 @@ f='serif-reg'; find ../ttf/$f -iname "*.ttf" | while read p; do echo "- $p" >> y
 f='serif-ita'; find ../ttf/$f -iname "*.ttf" | while read p; do echo "- $p" >> yaml/$f.yaml; done; ./sort_fonts.py yaml/$f.yaml;
 f='serif-bol'; find ../ttf/$f -iname "*.ttf" | while read p; do echo "- $p" >> yaml/$f.yaml; done; ./sort_fonts.py yaml/$f.yaml;
 f='serif-bolita'; find ../ttf/$f -iname "*.ttf" | while read p; do echo "- $p" >> yaml/$f.yaml; done; ./sort_fonts.py yaml/$f.yaml;
-</file>
 
-<file path="merge/merge_fonts.py">
-#!/usr/bin/env python3
-#
-# Copyright 2017 Google Inc. All rights reserved.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+</document_content>
+</document>
 
-"""Merges fonts.
-Two notable differences between merge_noto and this script are:
-1. merge_noto merges all fonts in Noto, or merges a subset of Noto
-   clustered by region. While This script merges a selected font subset.
-2. The line metrics in the final merged font are substituted by those in
-   NotoSans-Regular.ttf (LGC). This is to optimize the user experience in LGC.
-   The drawback is some tall scripts in the file list (like Balinese, Cuneiform,
-  Javaness) might vertically overlap with each other and also be clipped by the
-  edge of the UI. This should be handled carefully by the UI designer, say
-  changing the line height or adding the margin.
-
-
-Sample Usage:
-    $ merge_fonts.py -d noto-fonts/unhinted -o NotoSansMerged-Regular.ttf
-
-"""
+# File: /Users/adam/Developer/vcs/github.twardoch/pub/toto-fonts/merge/merge_fonts.py
+# Language: python
 
 import logging
 import os.path
 import sys
 from argparse import ArgumentParser
-
 import yaml
 from fontTools import merge, ttLib
 from fontTools.misc.loggingTools import Timer
 from merge_noto import add_gsub_to_font, has_gsub_table
-
 from nototools.substitute_linemetrics import (read_line_metrics,
                                               set_line_metrics)
 
-log = logging.getLogger("nototools.merge_fonts")
+def main(()):
 
 
-def main():
-    t = Timer()
-    parser = ArgumentParser()
-    parser.add_argument(
-        "-f", "--files", help="Path to YAML file containing paths to the fonts"
-    )
-    parser.add_argument(
-        "-o", "--output", default="merged.ttf", help="Path to output file."
-    )
-    parser.add_argument(
-        "-v",
-        "--verbose",
-        action="store_true",
-        help="Verbose mode, printing out more info",
-    )
-    args = parser.parse_args()
-
-    logging.basicConfig(level=logging.INFO if args.verbose else logging.WARNING)
-
-    if not args.files:
-        print("add -h for usage")
-        sys.exit(2)
-
-    with open(args.files) as stream:
-        try:
-            valid_files = yaml.safe_load(stream)
-        except yaml.YAMLError as exc:
-            print(exc)
-
-    if len(valid_files) <= 1:
-        log.warn(
-            "expecting at least two fonts to merge, but only got %d " + "font(s).",
-            len(valid_files),
-        )
-        sys.exit(-1)
-
-    for idx, file in enumerate(valid_files):
-        if not has_gsub_table(file):
-            log.info("adding default GSUB table to %s." % file)
-            valid_files[idx] = add_gsub_to_font(file)
-
-    merger = merge.Merger()
-    print("Merging %d Fonts..." % len(valid_files))
-    font = merger.merge(valid_files)
-    # Use the line metric in the first font to replace the one in final result.
-    metrics = read_line_metrics(ttLib.TTFont(valid_files[0]))
-    set_line_metrics(font, metrics)
-    font.save(args.output)
-    font.close()
-
-    print("%d fonts are merged. Cost %0.3f s." % (len(valid_files), t.time()))
-    print(
-        "Please check the result at %s."
-        % os.path.abspath(os.path.realpath(args.output))
-    )
-
-
-if __name__ == "__main__":
-    main()
-</file>
-
-<file path="merge/merge_noto.py">
-#!/usr/bin/env python
-#
-# Copyright 2014 Google Inc. All rights reserved.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-"""Merges Noto fonts."""
+# File: /Users/adam/Developer/vcs/github.twardoch/pub/toto-fonts/merge/merge_noto.py
+# Language: python
 
 import os.path
 import tempfile
-
 from fontTools import merge, ttLib
 from fontTools.ttLib.tables import otTables
 from fontTools.unicodedata import ot_tags_from_script
 
+def make_font_name((script)):
 
-def make_font_name(script):
-    if script:
-        return "Noto Sans %s" % script
-    else:
-        return "Noto Sans"
+def make_puncless_font_name((script)):
 
+def make_font_file_name((script, weight, directory="individual/unhinted")):
 
-def make_puncless_font_name(script):
-    return make_font_name(script).replace(" ", "").replace("-", "")
+def add_ui_alternative((table, target)):
 
+def has_gsub_table((fontfile)):
 
-def make_font_file_name(script, weight, directory="individual/unhinted"):
-    filename = f"{directory}/{make_puncless_font_name(script)}-{weight}.ttf"
-    return filename
+def get_opentype_script_tags((fontfile)):
 
-
-def add_ui_alternative(table, target):
-    new_target = target + " UI"
-    sources = table[target]
-    new_sources = [source + " UI" for source in sources]
-    table[new_target] = new_sources
-
-
-def has_gsub_table(fontfile):
-    font = ttLib.TTFont(fontfile)
-    return "GSUB" in font
-
-
-SCRIPT_TO_OPENTYPE_SCRIPT_TAG = {
-    "CypriotSyllabary": "cprt",
-    "Deseret": "dsrt",
-    "Glagolitic": "glag",
-    "Lisu": "lisu",
-    "Ogham": "ogam",
-    "OldItalic": "ital",
-    "Runic": "runr",
-    "Shavian": "shaw",
-    "Vai": "vai ",
-    "Carian": "cari",
-    "EgyptianHieroglyphs": "egyp",
-    "ImperialAramaic": "armi",
-    "LinearB": "linb",
-    "Lycian": "lyci",
-    "Lydian": "lydi",
-    "OldPersian": "xpeo",
-    "OldSouthArabian": "sarb",
-    "OldTurkic": "orkh",
-    "Osmanya": "osma",
-    "Phoenician": "phnx",
-    "SumeroAkkadianCuneiform": "xsux",
-    "Ugaritic": "ugar",
-    "OlChiki": "olck",
-    "TaiLe": "tale",
-    # Following keys are added to satisfy the use case in merge_fonts.py
-    # Reference:
-    # https://www.google.com/get/noto/#sans-xsux
-    # https://www.google.com/get/noto/#sans-cprt
-    # https://www.google.com/get/noto/#sans-yiii
-    # https://www.microsoft.com/typography/otspec/scripttags.htm
-    "Cuneiform": "xsux",
-    "Cypriot": "cprt",
-    "Yi": "yi  ",
-}
-
-
-def get_opentype_script_tags(fontfile):
-    scripts = []
-    dirname = os.path.split(os.path.dirname(fontfile))[1]
-    isoscripts = dirname[1:-1].split("__")
-    for isoscript in isoscripts:
-        scripts += ot_tags_from_script(isoscript)
-    if not len(scripts):
-        fontfile = os.path.basename(fontfile)
-        if fontfile.startswith("NotoSans-"):
-            fontfile = fontfile[8:]
-        fontfile = fontfile[: fontfile.index("-")]
-        scripts = [SCRIPT_TO_OPENTYPE_SCRIPT_TAG.get(fontfile, "DFLT")]
-    return scripts
-
-
-def add_gsub_to_font(fontfile):
+def add_gsub_to_font((fontfile)):
     """Adds an empty GSUB table to a font."""
-    font = ttLib.TTFont(fontfile)
-    gsub_table = ttLib.getTableClass("GSUB")("GSUB")
-    gsub_table.table = otTables.GSUB()
-    gsub_table.table.Version = 1.0
-    gsub_table.table.ScriptList = otTables.ScriptList()
-    gsub_table.table.ScriptCount = 1
-    gsub_table.table.LookupList = otTables.LookupList()
-    gsub_table.table.LookupList.LookupCount = 0
-    gsub_table.table.LookupList.Lookup = []
-    gsub_table.table.FeatureList = otTables.FeatureList()
-    gsub_table.table.FeatureList.FeatureCount = 0
-    gsub_table.table.LookupList.FeatureRecord = []
 
-    for script in get_opentype_script_tags(fontfile):
-        script_record = otTables.ScriptRecord()
-        script_record.ScriptTag = script
-        script_record.Script = otTables.Script()
-        script_record.Script.LangSysCount = 0
-        script_record.Script.LangSysRecord = []
-
-    default_lang_sys = otTables.DefaultLangSys()
-    default_lang_sys.FeatureIndex = []
-    default_lang_sys.FeatureCount = 0
-    default_lang_sys.LookupOrder = None
-    default_lang_sys.ReqFeatureIndex = 65535
-    script_record.Script.DefaultLangSys = default_lang_sys
-
-    gsub_table.table.ScriptList.ScriptRecord = [script_record]
-
-    font["GSUB"] = gsub_table
-
-    target_file = tempfile.gettempdir() + "/" + os.path.basename(fontfile)
-    font.save(target_file)
-    return target_file
+def main(()):
 
 
-def main():
-    merge_table = {
-        "Historic": [
-            "Avestan",
-            "Carian",
-            "Egyptian Hieroglyphs",
-            "Imperial Aramaic",
-            "Pahlavi",  # Should be 'Inscriptional Pahlavi',
-            "Parthian",  # Should be 'Inscriptional Parthian',
-            "Linear B",
-            "Lycian",
-            "Lydian",
-            "Mandaic",
-            "Old Persian",
-            "Old South Arabian",
-            "Old Turkic",
-            "Osmanya",
-            "Phags-Pa",
-            "Phoenician",
-            "Samaritan",
-            "Sumero-Akkadian Cuneiform",
-            "Ugaritic",
-        ],
-        "South Asian": [
-            "Devanagari",
-            "Bengali",
-            "Gurmukhi",
-            "Gujarati",
-            "Oriya",
-            "Tamil",
-            "Telugu",
-            "Kannada",
-            "Malayalam",
-            "Sinhala",
-            "Thaana",
-            "Brahmi",
-            "Kaithi",
-            "Kharoshthi",  # Move to Historic?
-            "Lepcha",
-            "Limbu",
-            "Meetei Mayek",
-            "Ol Chiki",
-            "Saurashtra",
-            "Syloti Nagri",
-        ],
-        "Southeast Asian": [
-            "Thai",
-            "Lao",
-            "Khmer",
-            "Batak",
-            "Buginese",
-            "Buhid",
-            "Cham",
-            "Hanunoo",
-            "Javanese",
-            "Kayah Li",
-            "New Tai Lue",
-            "Rejang",
-            "Sundanese",
-            "Tagalog",
-            "Tagbanwa",
-            "Tai Le",
-            "Tai Tham",
-            "Tai Viet",
-        ],
-        "": [  # LGC,
-            "Armenian",
-            "Bamum",
-            "Canadian Aboriginal",
-            "Cherokee",
-            "Coptic",
-            "Cypriot Syllabary",
-            "Deseret",
-            "Ethiopic",
-            "Georgian",
-            "Glagolitic",
-            "Gothic",
-            "Hebrew",
-            "Lisu",
-            "NKo",
-            "Ogham",
-            "Old Italic",
-            "Runic",
-            "Shavian",
-            "Tifinagh",
-            "Vai",
-        ],
-    }
+# File: /Users/adam/Developer/vcs/github.twardoch/pub/toto-fonts/merge/sort_fonts.py
+# Language: python
 
-    add_ui_alternative(merge_table, "South Asian")
-    add_ui_alternative(merge_table, "Southeast Asian")
-
-    for merge_target in sorted(merge_table):
-        for weight in ["Regular", "Bold"]:
-            merger = merge.Merger()
-            source_fonts = merge_table[merge_target]
-            if "" not in source_fonts:
-                source_fonts = [""] + source_fonts  # The LGC font
-            regular_sources = [
-                make_font_file_name(script, weight) for script in source_fonts
-            ]
-            regular_sources = [font for font in regular_sources if os.path.isfile(font)]
-
-            if len(regular_sources) <= 1:
-                continue
-
-            print(f"Merging Noto Sans {merge_target} {weight}")
-
-            for index, fontfile in enumerate(regular_sources):
-                if not has_gsub_table(fontfile):
-                    regular_sources[index] = add_gsub_to_font(fontfile)
-
-            font = merger.merge(regular_sources)
-
-            first_font = source_fonts[0]
-            if first_font != merge_target:
-                for name_record in font["name"].names:
-                    name = unicode(name_record.string, "UTF-16BE")
-                    name = name.replace(
-                        make_font_name(first_font), make_font_name(merge_target)
-                    )
-                    name = name.replace(
-                        make_puncless_font_name(first_font),
-                        make_puncless_font_name(merge_target),
-                    )
-                    name_record.string = name.encode("UTF-16BE")
-
-            font.save(
-                make_font_file_name(merge_target, weight, directory="combined/unhinted")
-            )
-
-
-if __name__ == "__main__":
-    main()
-</file>
-
-<file path="merge/sort_fonts.py">
-#!/usr/bin/env python3
 import sys
-
 import yaml
 from fontTools import ttLib
 
-try:
-    y = sys.argv[1]
-except:
-    print("provide YAML file path")
-    sys.exit(2)
 
-files = None
-with open(y) as stream:
-    try:
-        files = yaml.safe_load(stream)
-    except yaml.YAMLError as exc:
-        print(exc)
+<document index="10">
+<source>merge/yaml/basic-sans-reg.yaml</source>
+<document_content>
+- ../ttf/sans-reg/_Latn__Grek__Cyrl_/NotoSans-LCG.ttf
+- ../ttf/sans-reg/_Zsym_/NotoSans-Symbols.ttf
+- ../ttf/other/_Zzzz_/DroidEmoji.ttf
+- ../ttf/sans-reg/_Armn_/NotoSans-Armenian.ttf
+- ../ttf/sans-reg/_Geor_/NotoSans-Georgian.ttf
 
-if files:
-    psort = {}
-    for p in files:
-        u2n = None
-        ttx = ttLib.TTFont(p)
-        cmap = ttx["cmap"].getcmap(3, 10)
-        if not cmap:
-            cmap = ttx["cmap"].getcmap(3, 1)
-        if not cmap:
-            cmap = ttx["cmap"].getcmap(0, 4)
-        if not cmap:
-            cmap = ttx["cmap"].getcmap(0, 3)
-        if cmap:
-            u2n = {
-                u: n for u, n in cmap.cmap.items() if u not in range(0xE000, 0xF8FF + 1)
-            }
-        if u2n:
-            us = list(u2n.keys())
-            repru = us[int(len(us) * 0.5)]
-            psort[p] = repru
-    psort = sorted(psort, key=psort.get)
-    with open(y, "w") as stream:
-        try:
-            yaml.safe_dump(psort, stream)
-        except yaml.YAMLError as exc:
-            print(exc)
-</file>
+</document_content>
+</document>
 
-<file path="README.md">
-# Toto fonts
-This repository hosts “last good” (from my perspective) versions of Google’s [Noto fonts](https://github.com/googlei18n/noto-fonts/) from September 23, 2015, which were published under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html). After that date, the license was changed to OFL, along with a few other Apache 2-licensed Google fonts (Droid and Open Sans). The Apache 2 license allows very flexible creation of derivative works, while the OFL license is more copyleft and prohibits certain use cases. 
+<document index="11">
+<source>merge/yaml/basic-serif-reg.yaml</source>
+<document_content>
+- ../ttf/serif-reg/_Latn__Grek__Cyrl_/NotoSerif-LCG.ttf
+- ../ttf/sans-reg/_Zsym_/NotoSans-Symbols.ttf
+- ../ttf/other/_Zzzz_/DroidEmoji.ttf
+- ../ttf/serif-reg/_Armn_/NotoSerif-Armenian.ttf
+- ../ttf/serif-reg/_Geor_/NotoSerif-Georgian.ttf
 
-The fonts are grouped by style, then by the ISO 15924 script codes dominant in each font’s glyph repertoire. 
+</document_content>
+</document>
 
-* Also see [Toto Han fonts](https://github.com/twardoch/toto-han-fonts)
+<document index="12">
+<source>merge/yaml/sans-bol.yaml</source>
+<document_content>
+- ../ttf/sans-bol/_Latn__Grek__Cyrl_/NotoSans-LCG-Bold.ttf
+- ../ttf/sans-bol/_Armn_/NotoSans-Armenian-Bold.ttf
+- ../ttf/sans-bol/_Geor_/NotoSans-Georgian-Bold.ttf
+- ../ttf/sans-bol/_Hebr_/NotoSans-Hebrew-Bold.ttf
+- ../ttf/sans-bol/_Thaa_/NotoSans-Thaana-Bold.ttf
+- ../ttf/sans-bol/_Deva_/NotoSans-Devanagari-Bold.ttf
+- ../ttf/sans-bol/_Beng_/NotoSans-Bengali-Bold.ttf
+- ../ttf/sans-bol/_Guru_/NotoSans-Gurmukhi-Bold.ttf
+- ../ttf/sans-bol/_Gujr_/NotoSans-Gujarati-Bold.ttf
+- ../ttf/sans-bol/_Orya_/NotoSans-Oriya-Bold.ttf
+- ../ttf/sans-bol/_Taml_/NotoSans-Tamil-Bold.ttf
+- ../ttf/sans-bol/_Telu_/NotoSans-Telugu-Bold.ttf
+- ../ttf/sans-bol/_Knda_/NotoSans-Kannada-Bold.ttf
+- ../ttf/sans-bol/_Mlym_/NotoSans-Malayalam-Bold.ttf
+- ../ttf/sans-bol/_Sinh_/NotoSans-Sinhala-Bold.ttf
+- ../ttf/sans-bol/_Thai_/NotoSans-Thai-Bold.ttf
+- ../ttf/sans-bol/_Laoo_/NotoSans-Lao-Bold.ttf
+- ../ttf/sans-bol/_Tibt_/NotoSans-Tibetan-Bold.ttf
+- ../ttf/sans-bol/_Mymr_/NotoSans-Myanmar-Bold.ttf
+- ../ttf/sans-bol/_Ethi_/NotoSans-Ethiopic-Bold.ttf
+- ../ttf/sans-bol/_Khmr_/NotoSans-Khmer-Bold.ttf
+- ../ttf/sans-bol/_Cham_/NotoSans-Cham-Bold.ttf
 
-— Adam Twardoch, Nov 27, 2015
-</file>
+</document_content>
+</document>
 
-</files>
+<document index="13">
+<source>merge/yaml/sans-bolita.yaml</source>
+<document_content>
+- ../ttf/sans-bolita/_Latn__Grek__Cyrl_/NotoSans-LCG-BoldItalic.ttf
+
+</document_content>
+</document>
+
+<document index="14">
+<source>merge/yaml/sans-ita.yaml</source>
+<document_content>
+- ../ttf/sans-ita/_Latn__Grek__Cyrl_/NotoSans-LCG-Italic.ttf
+
+</document_content>
+</document>
+
+<document index="15">
+<source>merge/yaml/sans-reg.yaml</source>
+<document_content>
+- ../ttf/sans-reg/_Latn__Grek__Cyrl_/NotoSans-LCG.ttf
+- ../ttf/sans-reg/_Zsym_/NotoSans-Symbols.ttf
+- ../ttf/other/_Zzzz_/DroidEmoji.ttf
+- ../ttf/sans-reg/_Armn_/NotoSans-Armenian.ttf
+- ../ttf/sans-reg/_Geor_/NotoSans-Georgian.ttf
+- ../ttf/sans-reg/_Hebr_/NotoSans-Hebrew.ttf
+- ../ttf/other/_Arab_/NotoNaskhArabic.ttf
+- ../ttf/sans-reg/_Syrc_/NotoSans-SyriacEastern.ttf
+- ../ttf/sans-reg/_Syrc_/NotoSans-SyriacEstrangela.ttf
+- ../ttf/sans-reg/_Syrc_/NotoSans-SyriacWestern.ttf
+- ../ttf/sans-reg/_Thaa_/NotoSans-Thaana.ttf
+- ../ttf/sans-reg/_Nkoo_/NotoSans-NKo.ttf
+- ../ttf/sans-reg/_Samr_/NotoSans-Samaritan.ttf
+- ../ttf/sans-reg/_Mand_/NotoSans-Mandaic.ttf
+- ../ttf/sans-reg/_Deva_/NotoSans-Devanagari.ttf
+- ../ttf/sans-reg/_Beng_/NotoSans-Bengali.ttf
+- ../ttf/sans-reg/_Guru_/NotoSans-Gurmukhi.ttf
+- ../ttf/sans-reg/_Gujr_/NotoSans-Gujarati.ttf
+- ../ttf/sans-reg/_Orya_/NotoSans-Oriya.ttf
+- ../ttf/sans-reg/_Taml_/NotoSans-Tamil.ttf
+- ../ttf/sans-reg/_Telu_/NotoSans-Telugu.ttf
+- ../ttf/sans-reg/_Knda_/NotoSans-Kannada.ttf
+- ../ttf/sans-reg/_Mlym_/NotoSans-Malayalam.ttf
+- ../ttf/sans-reg/_Sinh_/NotoSans-Sinhala.ttf
+- ../ttf/sans-reg/_Thai_/NotoSans-Thai.ttf
+- ../ttf/sans-reg/_Laoo_/NotoSans-Lao.ttf
+- ../ttf/sans-reg/_Tibt_/NotoSans-Tibetan.ttf
+- ../ttf/sans-reg/_Mymr_/NotoSans-Myanmar.ttf
+- ../ttf/sans-reg/_Ethi_/NotoSans-Ethiopic.ttf
+- ../ttf/sans-reg/_Cher_/NotoSans-Cherokee.ttf
+- ../ttf/sans-reg/_Cans_/NotoSans-CanadianAboriginal.ttf
+- ../ttf/sans-reg/_Ogam_/NotoSans-Ogham.ttf
+- ../ttf/sans-reg/_Runr_/NotoSans-Runic.ttf
+- ../ttf/sans-reg/_Tglg_/NotoSans-Tagalog.ttf
+- ../ttf/sans-reg/_Hano_/NotoSans-Hanunoo.ttf
+- ../ttf/sans-reg/_Buhd_/NotoSans-Buhid.ttf
+- ../ttf/sans-reg/_Tagb_/NotoSans-Tagbanwa.ttf
+- ../ttf/sans-reg/_Khmr_/NotoSans-Khmer.ttf
+- ../ttf/sans-reg/_Mong_/NotoSans-Mongolian.ttf
+- ../ttf/sans-reg/_Limb_/NotoSans-Limbu.ttf
+- ../ttf/sans-reg/_Tale_/NotoSans-TaiLe.ttf
+- ../ttf/sans-reg/_Talu_/NotoSans-NewTaiLue.ttf
+- ../ttf/sans-reg/_Bugi_/NotoSans-Buginese.ttf
+- ../ttf/sans-reg/_Lana_/NotoSans-TaiTham.ttf
+- ../ttf/sans-reg/_Bali_/NotoSans-Balinese.ttf
+- ../ttf/sans-reg/_Sund_/NotoSans-Sundanese.ttf
+- ../ttf/sans-reg/_Batk_/NotoSans-Batak.ttf
+- ../ttf/sans-reg/_Lepc_/NotoSans-Lepcha.ttf
+- ../ttf/sans-reg/_Olck_/NotoSans-OlChiki.ttf
+- ../ttf/sans-reg/_Glag_/NotoSans-Glagolitic.ttf
+- ../ttf/sans-reg/_Copt_/NotoSans-Coptic.ttf
+- ../ttf/sans-reg/_Tfng_/NotoSans-Tifinagh.ttf
+- ../ttf/sans-reg/_Yiii_/NotoSans-Yi.ttf
+- ../ttf/sans-reg/_Lisu_/NotoSans-Lisu.ttf
+- ../ttf/sans-reg/_Vaii_/NotoSans-Vai.ttf
+- ../ttf/sans-reg/_Sylo_/NotoSans-SylotiNagri.ttf
+- ../ttf/sans-reg/_Phag_/NotoSans-PhagsPa.ttf
+- ../ttf/sans-reg/_Saur_/NotoSans-Saurashtra.ttf
+- ../ttf/sans-reg/_Kali_/NotoSans-KayahLi.ttf
+- ../ttf/sans-reg/_Rjng_/NotoSans-Rejang.ttf
+- ../ttf/sans-reg/_Java_/NotoSans-Javanese.ttf
+- ../ttf/sans-reg/_Cham_/NotoSans-Cham.ttf
+- ../ttf/sans-reg/_Tavt_/NotoSans-TaiViet.ttf
+- ../ttf/sans-reg/_Mtei_/NotoSans-MeeteiMayek.ttf
+- ../ttf/sans-reg/_Linb_/NotoSans-LinearB.ttf
+- ../ttf/sans-reg/_Lyci_/NotoSans-Lycian.ttf
+- ../ttf/sans-reg/_Cari_/NotoSans-Carian.ttf
+- ../ttf/sans-reg/_Ital_/NotoSans-OldItalic.ttf
+- ../ttf/sans-reg/_Goth_/NotoSans-Gothic.ttf
+- ../ttf/sans-reg/_Ugar_/NotoSans-Ugaritic.ttf
+- ../ttf/sans-reg/_Xpeo_/NotoSans-OldPersian.ttf
+- ../ttf/sans-reg/_Dsrt_/NotoSans-Deseret.ttf
+- ../ttf/sans-reg/_Shaw_/NotoSans-Shavian.ttf
+- ../ttf/sans-reg/_Osma_/NotoSans-Osmanya.ttf
+- ../ttf/sans-reg/_Cprt_/NotoSans-Cypriot.ttf
+- ../ttf/sans-reg/_Armi_/NotoSans-ImperialAramaic.ttf
+- ../ttf/sans-reg/_Phnx_/NotoSans-Phoenician.ttf
+- ../ttf/sans-reg/_Lydi_/NotoSans-Lydian.ttf
+- ../ttf/sans-reg/_Khar_/NotoSans-Kharoshthi.ttf
+- ../ttf/sans-reg/_Sarb_/NotoSans-OldSouthArabian.ttf
+- ../ttf/sans-reg/_Avst_/NotoSans-Avestan.ttf
+- ../ttf/sans-reg/_Prti_/NotoSans-InscriptionalParthian.ttf
+- ../ttf/sans-reg/_Phli_/NotoSans-InscriptionalPahlavi.ttf
+- ../ttf/sans-reg/_Orkh_/NotoSans-OldTurkic.ttf
+- ../ttf/sans-reg/_Brah_/NotoSans-Brahmi.ttf
+- ../ttf/sans-reg/_Kthi_/NotoSans-Kaithi.ttf
+- ../ttf/sans-reg/_Egyp__Xsux__Linb__Latn__Orkh_/NotoSans-Historic.ttf
+- ../ttf/sans-reg/_Xsux_/NotoSans-Cuneiform.ttf
+- ../ttf/sans-reg/_Egyp_/NotoSans-EgyptianHieroglyphs.ttf
+- ../ttf/sans-reg/_Bamu_/NotoSans-Bamum.ttf
+
+</document_content>
+</document>
+
+<document index="16">
+<source>merge/yaml/serif-bol.yaml</source>
+<document_content>
+- ../ttf/serif-bol/_Latn__Grek__Cyrl_/NotoSerif-LCG-Bold.ttf
+- ../ttf/serif-bol/_Armn_/NotoSerif-Armenian-Bold.ttf
+- ../ttf/serif-bol/_Geor_/NotoSerif-Georgian-Bold.ttf
+- ../ttf/serif-bol/_Thai_/NotoSerif-Thai-Bold.ttf
+- ../ttf/serif-bol/_Laoo_/NotoSerif-Lao-Bold.ttf
+- ../ttf/serif-bol/_Khmr_/NotoSerif-Khmer-Bold.ttf
+
+</document_content>
+</document>
+
+<document index="17">
+<source>merge/yaml/serif-bolita.yaml</source>
+<document_content>
+- ../ttf/serif-bolita/_Latn__Grek__Cyrl_/NotoSerif-LCG-BoldItalic.ttf
+
+</document_content>
+</document>
+
+<document index="18">
+<source>merge/yaml/serif-ita.yaml</source>
+<document_content>
+- ../ttf/serif-ita/_Latn__Grek__Cyrl_/NotoSerif-LCG-Italic.ttf
+
+</document_content>
+</document>
+
+<document index="19">
+<source>merge/yaml/serif-reg.yaml</source>
+<document_content>
+- ../ttf/serif-reg/_Latn__Grek__Cyrl_/NotoSerif-LCG.ttf
+- ../ttf/sans-reg/_Zsym_/NotoSans-Symbols.ttf
+- ../ttf/other/_Zzzz_/DroidEmoji.ttf
+- ../ttf/serif-reg/_Armn_/NotoSerif-Armenian.ttf
+- ../ttf/serif-reg/_Geor_/NotoSerif-Georgian.ttf
+- ../ttf/other/_Arab_/NotoNaskhArabic.ttf
+- ../ttf/serif-reg/_Thai_/NotoSerif-Thai.ttf
+- ../ttf/serif-reg/_Laoo_/NotoSerif-Lao.ttf
+- ../ttf/serif-reg/_Khmr_/NotoSerif-Khmer.ttf
+
+
+</document_content>
+</document>
+
+</documents>
